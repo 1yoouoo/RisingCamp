@@ -1,6 +1,4 @@
-// 1. dom, event, event.target, this
-// 2. Document, node, element in js
-// 3. regex
+
 
 function faqButtonClick(dom) {
     let thinX = dom.querySelector("#thin-x");

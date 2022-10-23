@@ -619,3 +619,170 @@ video {
 
 /* -----------------SECTION 4 ----------------- */
 
+.animation-card .our-story-card-text-section4 {
+    flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 3;
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.our-story-card-title {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+
+.animation-card.watchOnDevice .our-story-card-animation-container {
+    margin: -5% -10% 0 0;
+}
+
+.animation-card.watchOnDevice .our-story-card-img, .animation-card.watchOnTv .our-story-card-img {
+    position: relative;
+    z-index: 2;
+}
+
+.animation-card.watchOnDevice .our-story-card-animation {
+    height: 100%;
+    left: 50%;
+    max-height: 47%;
+    max-width: 63%;
+    position: absolute;
+    top: 34%;
+    transform: translate(-50%,-50%);
+    width: 100%;
+}
+
+.animation-card.watchOnDevice .our-story-card-video, .animation-card.watchOnTv .our-story-card-video {
+    height: 100%;
+    width: 100%;
+}
+
+/* section 5 */
+
+.animation-card.flipped .animation-card-container .our-story-card-text-section5 {
+    padding: 0 0 0 3rem;
+}
+
+.animation-card .our-story-card-text-section5 {
+    flex: 0 1 auto;
+    height: 100%;
+    padding: 0 3rem 0 0;
+    width: 52%;
+    z-index: 3;
+}
+
+.our-story-card-subtitle, .our-story-card-text-section5 {
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+
+
+/* section6 */
+
+.faq-card {
+    text-align: center;
+}
+
+.our-story-card-text-section6 {
+    font-size: 1.625rem;
+    font-weight: 400;
+}
+
+.our-story-card-title-section6 {
+    font-size: 3.125rem;
+    line-height: 1.1;
+    margin-bottom: 0.5rem;
+}
+/* BUTTONLIST */
+
+.faq-card .faq-question {
+    border: 0;
+    font-weight: 400;
+    margin-bottom: 1px;
+    padding: 0.8em 2.2em 0.8em 1.2em;
+    position: relative;
+    width: 100%;
+    background: #303030;
+    display: block;
+    text-align: left;
+    -webkit-appearance: button;
+    cursor: pointer;
+    text-transform: none;
+    overflow: visible;
+    color: inherit;
+    font: inherit;
+}
+
+.faq-card .faq-list {
+    margin: 2em auto;
+    width: 75%;
+    max-width: 815px;
+}
+
+.our-story-card-text-section6 > ul {
+    padding: 0;
+}
+
+.faq-card .faq-list-item {
+    list-style-type: none;
+    margin: 0 0 8px;
+}
+
+
+.faq-card .svg-icon-thin-x {
+    fill: #fff;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+}
+
+/* ANSWER OPEN/CLOSED */
+.faq-card .faq-answer.closed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+}
+.faq-card .faq-answer.open {
+    max-height: 1200px;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+}
+
+
+.email-form {
+    display: flex;
+    flex-direction: column;
+    max-width: 950px;
+    padding-top: 0.85rem;
+}
+
+.faq-card .svg-icon-thin-x {
+    fill: #fff;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+}
+/* class 이름만 바꿔주면 알아서 바뀜 (css우선순위) */
+.faq-card .svg-closed {
+    transform: translateY(-50%) rotate(-45deg);
+}
+
+.faq-card .faq-answer, .faq-card .faq-question {
+    background: #303030;
+    display: block;
+    text-align: left;
+}
+
+.faq-card .faq-answer span {
+    display: inline-block;
+    padding: 1.2em;
+}

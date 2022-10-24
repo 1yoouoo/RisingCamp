@@ -262,6 +262,10 @@ label {
     flex-direction: column;
 }
 
+.faq-card .email-form {
+    margin: 0 auto;
+}
+
 .email-form-lockup {
     display: flex;
     flex-direction: row;
@@ -479,7 +483,9 @@ h2 {
     margin-inline-end: 0px;
     font-weight: bold;
 }
-
+.our-story-card .animation-card-container {
+    height: 258px;
+}
 .animation-card .our-story-card-img-container {
     box-sizing: border-box;
     display: flex;
@@ -754,14 +760,6 @@ video {
     transition: max-height .25s cubic-bezier(.5,0,.1,1);
 }
 
-
-.email-form {
-    display: flex;
-    flex-direction: column;
-    max-width: 950px;
-    padding-top: 0.85rem;
-}
-
 .faq-card .svg-icon-thin-x {
     fill: #fff;
     height: 1em;
@@ -849,7 +847,7 @@ ul.structural>li {
     min-width: 100px;
     padding: 0 12px 0 0;
     vertical-align: top;
-    width: 25%;
+    width: 24.6%;
 }
 
 .footer-link {
@@ -903,10 +901,10 @@ ul.structural>li {
 }
 
 .lang-selection-container .ui-select-wrapper .select-arrow.prefix .ui-select.medium {
-    padding-right: 26px;
+    /* padding-right: 26px; */
     text-indent: 0;
     line-height: 1.7;
-    padding-left: 50px;
+    /* padding-left: 50px; */
 }
 .footer-card .dark .ui-select-wrapper .ui-select {
     background-color: #000;
@@ -927,7 +925,7 @@ ul.structural>li {
 }
 
 .copy-text {
-    font-size: .75em;
-    line-height: 1em;
+    font-size: 0.7em;
+    line-height: 1.5em;
     margin: 20px 0;
 }

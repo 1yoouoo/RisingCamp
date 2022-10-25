@@ -21,6 +21,7 @@ div {
 
 
 
+
 /* CONTAINER */
 
 .our-story-container {
@@ -808,6 +809,9 @@ video {
     margin: 0 auto;
     padding-top: 0px;
     width: 90%;
+}
+.site-footer a {
+    color: #737373;
 }
 
 .footer-top {

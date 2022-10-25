@@ -1,5 +1,3 @@
-
-
 function faqButtonClick(dom) {
     let thinX = dom.querySelector("#thin-x");
     thinX.classList.toggle("svg-closed")

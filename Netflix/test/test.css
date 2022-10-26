@@ -1,9 +1,0 @@
-.row {
-	margin-top: 50px;
-}
-
-.p::before {
-    content: "\f772";
-    font-weight: 900;  
-    margin-right: 10px;
-}

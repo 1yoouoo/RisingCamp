@@ -7,25 +7,13 @@ import Footer from './Component/Footer'
 
 function App() {
   return (
-    <div className="App">
-      <div id="appMountPoint">
-        <div className="basicLayout">
-            <div className="netflix-sans-font-loaded">
-                <div className="our-story-desktop-framework">
-                    <div className="our-story-container">
-                        <Header />
-                        <div className="our-story-cards">
-                            <Navigator />
-                            <Services />
-                            <Faq />
-                        </div>
-                        <Footer />
-                    </div>
-                </div>
-            </div>
-        </div>
-      </div>
-    </div>
+    <>
+      <Header />
+      <Navigator />
+      <Services />
+      <Faq />
+      <Footer />
+    </>
   );
 }
 

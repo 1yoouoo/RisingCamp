@@ -1,4 +1,5 @@
 import Languageselector from "./Languageselector";
+import "./Header.css";
 
 const Header = () => {
     return (

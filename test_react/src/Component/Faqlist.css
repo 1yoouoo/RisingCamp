@@ -1,0 +1,48 @@
+.faq-question {
+    background: #303030;
+    display: block;
+    text-align: left;
+}
+
+.faq-list-item {
+    list-style-type: none;
+    margin: 0 0 8px;
+  }
+
+
+  /* ANSWER OPEN/CLOSED */
+  .faq-card .faq-answer.closed {
+    max-height: 0;
+    overflow: hidden;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  }
+  .faq-card .faq-answer.open {
+    max-height: 1200px;
+    transition: max-height .25s cubic-bezier(.5,0,.1,1);
+  }
+  
+  .faq-card .svg-icon-thin-x {
+    fill: #fff;
+    height: 1em;
+    position: absolute;
+    right: 1em;
+    top: 50%;
+    transform: translateY(-50%);
+    width: 1em;
+  }
+  /* class 이름만 바꿔주면 알아서 바뀜 (css우선순위) */
+  .faq-card .svg-closed {
+    transform: translateY(-50%) rotate(-45deg);
+  }
+  
+  .faq-card .faq-answer, .faq-card .faq-question {
+    background: #303030;
+    display: block;
+    text-align: left;
+  }
+  
+  .faq-card .faq-answer span {
+    display: inline-block;
+    padding: 1.2em;
+  }
+  

@@ -1,3 +1,5 @@
+import "./Faq.css"
+
 import Emailform from "./Emailform";
 import Faqlist from "./Faqlist";
 

@@ -1,3 +1,5 @@
+import "./Languageselector.css"
+
 const Languageselector = () => {
     return (
         <div className="lang-selection-container" id="lang-switcher">

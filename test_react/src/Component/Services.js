@@ -1,3 +1,5 @@
+import "./Services.css"
+
 import Card from "./Card";
 import Tv from "./img/tv.png"
 import Mobile from "./img/mobile.jpeg"
@@ -22,7 +24,7 @@ const Services = () => {
                         video={Section2_video}
                     />
                 </div>
-                <div style={{flexDirection:"row-reverse", direction:"rtl"}}>
+                <div style={{flexDirection:"row-reverse",direction:"rtl"}}>
                     <Card 
                         title={"Download your shows to watch offline."} 
                         subtitle={"Save your favorites easily and always have something to watch."}
@@ -38,7 +40,7 @@ const Services = () => {
                         video={Section4_video}
                     />
                 </div>
-                <div style={{flexDirection:"row-reverse", direction:"rtl"}}>
+                <div style={{flexDirection:"row-reverse",direction:"rtl"}}>
                     <Card 
                         title={"Create profiles for kids."} 
                         subtitle={"Send kids on adventures with their favorite characters in a space made just for them—free with your membership."}

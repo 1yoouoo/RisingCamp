@@ -5,7 +5,9 @@ import Routing from "./Routing";
 
 const root = createRoot(document.getElementById('root'));
 root.render(
-  <BrowserRouter>
-    <Routing />
-  </BrowserRouter>
+  <React.StrictMode>
+    <BrowserRouter>
+      <Routing />
+    </BrowserRouter>
+  </React.StrictMode>
 );

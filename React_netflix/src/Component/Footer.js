@@ -12,21 +12,21 @@ const Footer = () => {
                         <a className="footer-top-a" href="tel:010-6488-2739">010-6488-2739</a>
                     </p>
                     <ul className="footer-links structural">
-                        <Footerbox href={""} detail={"FAQ"}/>
-                        <Footerbox href={""} detail={"Help Center"}/>
-                        <Footerbox href={""} detail={"Account"}/>
-                        <Footerbox href={""} detail={"Media Center"}/>
-                        <Footerbox href={""} detail={"Investor Relations"}/>
-                        <Footerbox href={""} detail={"Jobs"}/>
-                        <Footerbox href={""} detail={"Ways to Watch"}/>
-                        <Footerbox href={""} detail={"Terms of Use"}/>
-                        <Footerbox href={""} detail={"Privacy"}/>
-                        <Footerbox href={""} detail={"Cookie Preferences"}/>
-                        <Footerbox href={""} detail={"Corporate Information"}/>
-                        <Footerbox href={""} detail={"Contact Us"}/>
-                        <Footerbox href={""} detail={"Speed Test"}/>
-                        <Footerbox href={""} detail={"Legal Notices"}/>
-                        <Footerbox href={""} detail={"Only on Netflix"}/>
+                        <Footerbox detail={"FAQ"}/>
+                        <Footerbox detail={"Help Center"}/>
+                        <Footerbox detail={"Account"}/>
+                        <Footerbox detail={"Media Center"}/>
+                        <Footerbox detail={"Investor Relations"}/>
+                        <Footerbox detail={"Jobs"}/>
+                        <Footerbox detail={"Ways to Watch"}/>
+                        <Footerbox detail={"Terms of Use"}/>
+                        <Footerbox detail={"Privacy"}/>
+                        <Footerbox detail={"Cookie Preferences"}/>
+                        <Footerbox detail={"Corporate Information"}/>
+                        <Footerbox detail={"Contact Us"}/>
+                        <Footerbox detail={"Speed Test"}/>
+                        <Footerbox detail={"Legal Notices"}/>
+                        <Footerbox detail={"Only on Netflix"}/>
                     </ul>
                     <Languageselector />
                     <p className="footer-country">Netflix South Korea</p>

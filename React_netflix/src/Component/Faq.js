@@ -4,12 +4,13 @@ import Emailform from "./Emailform";
 import Faqlist from "./Faqlist";
 
 const Faq = () => {
+    
     return (
         <div className="our-story-card faq-card" id="faq">
             <div className="our-story-card-text-section6">
                 <h1 className="our-story-card-title-section6">Frequently Asked Questions</h1>
                 <ul className="faq-list">
-                    <Faqlist 
+                    <Faqlist
                         title={"What is Netflix?"}
                         subtitle={"Netflix is a streaming service that offers a wide variety of award-winning TV shows, movies, anime, documentaries, and more on thousands of internet-connected devices.You can watch as much as you want, whenever you want without a single commercial – all for one low monthly price. There's always something new to discover and new TV shows and movies are added every week!"}
                     />

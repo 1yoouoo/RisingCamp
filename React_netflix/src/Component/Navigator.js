@@ -1,9 +1,7 @@
 import Emailform from './Emailform';
 import "./Navigator.css"
-// import { useNavigate } from "react-router-dom"
 
 const Navigator = () => {
-    // const navigate = useNavigate();
 
     return (
         <div className="our-story-card hero-card">

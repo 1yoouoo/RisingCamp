@@ -1,0 +1,21 @@
+html, body {
+    height: 100%;
+    margin: 0;
+  }
+
+.mainview-container {
+    position: absolute;
+    display: inline-block;
+    z-index: 0;
+    height: 100%;
+    width: 100%;
+}
+
+.mainview {
+    background: linear-gradient(to top, 1%, cyan);
+}
+
+.main-img  {
+    height: 100%;
+    width: 100%;
+}

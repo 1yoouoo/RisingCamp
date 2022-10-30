@@ -101,19 +101,18 @@ img {
     display: inline-block;
     line-height: 90px;
     text-decoration: none;
-    vertical-align: middle;
 }
 
 a {
     background-color: transparent;
     color: #737373;
 }
-
+/* 
 .svg-nfLogo .svg-icon-netflix-logo {
     height: 45px;
     vertical-align: middle;
     width: 167px;
-}
+} */
 
 svg:not(:root) {
     overflow: hidden;

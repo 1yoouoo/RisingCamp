@@ -12,6 +12,8 @@ html, body {
 
 .pinning-header {
     height: 70px;
+    position: absolute;
+    width: 100vw;
 }
 
 .pinning-header .pinning-header-container .main-header {
@@ -30,7 +32,7 @@ html, body {
     position: relative;
     transition: background-color .4s;
     z-index: 2;
-
+    
 }
 
 @media screen and (min-width: 950px){
@@ -105,4 +107,11 @@ a {
     height: 100%;
     position: relative;
     transition: color .4s;
+}
+
+.mainHeaderNfLogo {
+    fill: #e50914;
+    display: inline-block;
+    line-height: 90px;
+    text-decoration: none;
 }

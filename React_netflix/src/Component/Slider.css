@@ -6,6 +6,7 @@
 .sliderMask {
     display: flex;
     padding: 0 4%;
+    flex-direction: row;
 }
 
 .each-slide {
@@ -16,6 +17,11 @@
     max-width: 300px;
 }
 
-.each-slide div img{
-    border-radius: 0.2vw;
+.each-slide{
+    border-radius: 0.5vw;
+}
+
+.sliderTitle {
+    padding: 0 4.5%;
+    margin: 2% 0% 1%;
 }

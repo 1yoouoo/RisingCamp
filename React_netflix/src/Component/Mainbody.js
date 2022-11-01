@@ -1,28 +1,31 @@
 import "./Mainbody.css"
 import Slider from "./Slider"
+import SliderImg from "./SliderImg";
 
-function getContentList() {
+function getGroup() {
     const list = [];
     for(let i=1; i<=3; i++){
-        const item = {
-            key: i,
+        const group = {
+            group_id: i,
             number: `slider ${i}`,
-            detail: `콘텐츠 ${i}`,
-            imgList: [],
+            title: `그룹 ${i}`,
+            movieList: [],
         };
         for(let j=1; j<=10; j++) {
-            item.imgList.push({
-                number: `img ${j}`, 
-                url: require(`./img/slider${i}ImgItem${j}.webp`)
+            group.movieList.push({
+                movie_id: `movie ${i}${j}`, 
+                thumnail_url: require(`./img/slider${i}ImgItem${j}.webp`)
             })
         }
-        list.push(item)
+        list.push(group)
     }
     return list;
+
+
 }
 
 const Mainbody = () => {
-    let content_list = getContentList();
+    let group_list = getGroup();
 
     return (
         <div className="mainview-container">
@@ -31,14 +34,12 @@ const Mainbody = () => {
                     <img className="main-img" src={require('./img/Netflix-Main-img.webp')} alt="Main Img"/>
                 </span>
                 <div>
-                    {content_list.map((content) => {
+                    {group_list.map((group) => {
                         return <Slider
-                        key={content.key} 
-                        title = {content.detail}
-                        imgList = {content.imgList.map((img) => {
-                            return (
-                                <img className="each-slide" src={img.url} key={img.number} alt="" />
-                            )
+                        key={group.group_id} 
+                        title = {group.title}
+                        imgList = {group.movieList.map((movie) => {
+                            return <SliderImg key={movie.movie_id} movie={movie} />
                          })}
                         />
                     })}

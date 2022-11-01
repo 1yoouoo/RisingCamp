@@ -3,10 +3,10 @@ import "./Slider.css"
 const Slider = (props) => {
     return (
         <>
-            <div>
+            <h3 className="sliderTitle">
                 {props.title}
-            </div>
-            <div>
+            </h3>
+            <div className="sliderMask">
                 {props.imgList}
             </div>
         </>

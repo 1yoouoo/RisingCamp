@@ -1,17 +1,13 @@
+import "./Slider.css"
+
 const Slider = (props) => {
     return (
         <>
-            <h2>
-                <div>
-                    {props.title}
-                </div>
-            </h2>
-            <div className="rowCotent">
-                <div className="slider">
-                    <div className="sliderMask">
-                        {props.imgList}
-                    </div>
-                </div>
+            <div>
+                {props.title}
+            </div>
+            <div>
+                {props.imgList}
             </div>
         </>
     )

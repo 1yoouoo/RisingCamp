@@ -1,0 +1,21 @@
+.rowContent {
+    display: block;
+    width: 100vw;
+}
+
+.sliderMask {
+    display: flex;
+    padding: 0 4%;
+}
+
+.each-slide {
+    display: inline-block;
+    padding: 0 0.2vw;
+    width: 30vw;
+    min-width: 214.59px;
+    max-width: 300px;
+}
+
+.each-slide div img{
+    border-radius: 0.2vw;
+}

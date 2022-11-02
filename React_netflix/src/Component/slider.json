@@ -1,0 +1,12 @@
+[
+    {
+        "groupId" : "1",
+        "title" : "드라마",
+        "contentList" : [
+            {
+                "contentId" : "101",
+                "contentUrl" : "React_netflix/src/slider1ImgItem1.webp"
+            }
+        ]
+    }
+]

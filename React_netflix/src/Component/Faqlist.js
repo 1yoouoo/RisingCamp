@@ -26,3 +26,6 @@ const Faqlist = (props) => {
 }
 
 export default Faqlist;
+
+// 컴포넌트 폴더 , 페이지 폴더 -> 폴더 분리
+// false << 체크

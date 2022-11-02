@@ -1,9 +1,7 @@
 const SliderImg = (props) => {
-    console.log(props);
-    const movie = props.movie;
     return (
         <div className="slide-img">
-            <img className="each-slide" src={movie.thumnail_url}  alt="" />
+            <img className="each-slide" src={props.contentUrl}  alt="" />
         </div>
     )
 }

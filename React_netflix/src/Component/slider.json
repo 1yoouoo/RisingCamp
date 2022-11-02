@@ -5,7 +5,25 @@
         "contentList" : [
             {
                 "contentId" : "101",
-                "contentUrl" : "React_netflix/src/slider1ImgItem1.webp"
+                "contentUrl" : "./img/slider1ImgItem1.webp"
+            },
+            {
+                "contentId" : "102",
+                "contentUrl" : "./img/slider1ImgItem2.webp"
+            }
+        ]
+    },
+    {
+        "groupId" : "2",
+        "title" : "영화",
+        "contentList" : [
+            {
+                "contentId" : "201",
+                "contentUrl" : "./img/slider2ImgItem1.webp"
+            },
+            {
+                "contentId" : "202",
+                "contentUrl" : "./img/slider2ImgItem2.webp"
             }
         ]
     }

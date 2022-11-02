@@ -3,7 +3,6 @@ import Slider from "./Slider"
 import SliderImg from "./SliderImg";
 import datas from "./slider.json"
 
-
 const Mainbody = () => {
     return (
         <div className="mainview-container">
@@ -17,7 +16,7 @@ const Mainbody = () => {
                             <Slider 
                                 title = {data.title}
                                 imgList = {data.contentList.map((content) => {
-                                    return <SliderImg key={content.contentId} contentUrl={require(content.contentUrl)}/>
+                                    return <SliderImg key={content.contentId} contentUrl={require(`${content.contentUrl}`)}/>
                                 })}
                                 key={data.groupId}
                             />

@@ -16,7 +16,10 @@ const Mainbody = () => {
                             <Slider 
                                 title = {data.title}
                                 imgList = {data.contentList.map((content) => {
-                                    return <SliderImg key={content.contentId} contentUrl={require(`${content.contentUrl}`)}/>
+                                    return <SliderImg 
+                                    key={content.contentId} 
+                                    contentImgUrl={require(`${content.contentImgUrl}`)} 
+                                    contentVideoUrl={require(`${content.contentVideoUrl}`)}/>
                                 })}
                                 key={data.groupId}
                             />

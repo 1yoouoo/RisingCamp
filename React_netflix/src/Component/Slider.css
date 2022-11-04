@@ -9,17 +9,6 @@
     flex-direction: row;
 }
 
-.each-slide {
-    display: inline-block;
-    padding: 0 0.2vw;
-    width: 30vw;
-    min-width: 214.59px;
-    max-width: 300px;
-}
-
-.each-slide{
-    border-radius: 0.5vw;
-}
 
 .sliderTitle {
     padding: 0 4.5%;

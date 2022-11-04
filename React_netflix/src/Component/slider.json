@@ -5,11 +5,13 @@
         "contentList" : [
             {
                 "contentId" : "101",
-                "contentUrl" : "./img/slider1ImgItem1.webp"
+                "contentImgUrl" : "./img/slider1ImgItem1.webp",
+                "contentVideoUrl" : "./img/video/BreakingBadVideo.mov"
             },
             {
                 "contentId" : "102",
-                "contentUrl" : "./img/slider1ImgItem2.webp"
+                "contentImgUrl" : "./img/slider1ImgItem2.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
             }
         ]
     },
@@ -19,11 +21,13 @@
         "contentList" : [
             {
                 "contentId" : "201",
-                "contentUrl" : "./img/slider2ImgItem1.webp"
+                "contentImgUrl" : "./img/slider2ImgItem1.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
             },
             {
                 "contentId" : "202",
-                "contentUrl" : "./img/slider2ImgItem2.webp"
+                "contentImgUrl" : "./img/slider2ImgItem2.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
             }
         ]
     }

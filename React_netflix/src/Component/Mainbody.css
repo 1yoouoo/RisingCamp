@@ -2,8 +2,12 @@ html, body {
     height: 100%;
     margin: 0;
     height: 200vw;
-  }
-
+}
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
 .mainview-container {
     position: relative;
     z-index: 0;
@@ -11,15 +15,18 @@ html, body {
     width: 100%;
 }
 
-.mainview {
-    background: linear-gradient(to top, 1%, cyan);
-}
 
 .main-img  {
-    height: 100%;
-    width: 100%;
+    
 }
-
+.main-img-gradient {
+    position: absolute;
+    width: 100%;
+    height: 100px;
+    bottom: 0;
+    background-image: linear-gradient(to top, black 50%, transparent);
+    
+}
 .volatile-billboard-animations-container {
     display: block;
     position: relative;
@@ -119,4 +126,9 @@ html, body {
     right: 0;
     top: 60%;
     z-index: 8;
+}
+
+.slider-wrapper {
+    position: relative;
+    top: -100px;
 }

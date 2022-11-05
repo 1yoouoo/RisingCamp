@@ -9,8 +9,9 @@ const Mainbody = () => {
             <div className="mainview">
                 <span className="main" >
                     <img className="main-img" src={require('./img/Netflix-Main-img.webp')} alt="Main Img"/>
+                    <span className="main-img-gradient"></span>
                 </span>
-                <div>
+                <div className="slider-wrapper">
                     {datas.map(( data ) => {
                         return (
                             <Slider 

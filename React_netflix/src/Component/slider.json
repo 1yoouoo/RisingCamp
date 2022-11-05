@@ -12,6 +12,26 @@
                 "contentId" : "102",
                 "contentImgUrl" : "./img/slider1ImgItem2.webp",
                 "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "103",
+                "contentImgUrl" : "./img/slider1ImgItem3.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "104",
+                "contentImgUrl" : "./img/slider1ImgItem4.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "105",
+                "contentImgUrl" : "./img/slider1ImgItem5.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "106",
+                "contentImgUrl" : "./img/slider1ImgItem6.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
             }
         ]
     },
@@ -27,6 +47,52 @@
             {
                 "contentId" : "202",
                 "contentImgUrl" : "./img/slider2ImgItem2.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "203",
+                "contentImgUrl" : "./img/slider2ImgItem3.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "204",
+                "contentImgUrl" : "./img/slider2ImgItem4.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "205",
+                "contentImgUrl" : "./img/slider2ImgItem5.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            }
+        ]
+    },
+    {
+        "groupId" : "3",
+        "title" : "애니메이션",
+        "contentList" : [
+            {
+                "contentId" : "301",
+                "contentImgUrl" : "./img/slider3ImgItem1.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "302",
+                "contentImgUrl" : "./img/slider3ImgItem2.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "303",
+                "contentImgUrl" : "./img/slider3ImgItem3.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "304",
+                "contentImgUrl" : "./img/slider3ImgItem4.webp",
+                "contentVideoUrl" : "./img/video/test.mov"
+            },
+            {
+                "contentId" : "305",
+                "contentImgUrl" : "./img/slider3ImgItem5.webp",
                 "contentVideoUrl" : "./img/video/test.mov"
             }
         ]

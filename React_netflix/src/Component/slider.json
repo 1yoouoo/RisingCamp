@@ -17,21 +17,6 @@
                 "contentId" : "103",
                 "contentImgUrl" : "./img/slider1ImgItem3.webp",
                 "contentVideoUrl" : "./img/video/test.mov"
-            },
-            {
-                "contentId" : "104",
-                "contentImgUrl" : "./img/slider1ImgItem4.webp",
-                "contentVideoUrl" : "./img/video/test.mov"
-            },
-            {
-                "contentId" : "105",
-                "contentImgUrl" : "./img/slider1ImgItem5.webp",
-                "contentVideoUrl" : "./img/video/test.mov"
-            },
-            {
-                "contentId" : "106",
-                "contentImgUrl" : "./img/slider1ImgItem6.webp",
-                "contentVideoUrl" : "./img/video/test.mov"
             }
         ]
     },

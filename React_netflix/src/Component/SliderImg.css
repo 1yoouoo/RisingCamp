@@ -1,6 +1,7 @@
-
 .slide-img-popup-wrapper {
+  width: 30%;
   margin-right: 3px;
+  border: 1px solid green;
 }
 .slide-img-popup {
   width: 100%;
@@ -8,11 +9,14 @@
   margin-right: 5px;
 }
 .slide-img-popup:hover {
-  width: 30%;
+  position: absolute;
+  /* display: none; */
+  width: 40%;
   transform: translateY(-25%);
-  z-index: 3;
+  z-index: 5;
   border: 1px solid red;
 }
+.slide-img-popup:hover ~
 .img-popup-top{
   border-radius: 5px;
   position: relative;

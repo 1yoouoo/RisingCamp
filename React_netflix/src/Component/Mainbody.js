@@ -12,7 +12,11 @@ const getRecommenedGenreList = () => {
                         artId : "101",
                         thumbnailUrl : "./img/slider1ImgItem1.webp",
                         videoUrl : "./img/video/BreakingBadVideo.mov",
-
+                        interestPercent: 96.3,
+                        ageRestricted: 15,
+                        episodeCount: 16,
+                        videoQuality: 'HD',
+                        genreDescriptionList: ['진심 어린', '드라마'],
                     }
                 ]
 
@@ -35,13 +39,13 @@ const Mainbody = () => {
                         return (
                             <Slider 
                                 key={genre.genreId}
-                                    title = {genre.name}
-                                    imgList = {genre.artList.map((art) => {
-                                        return <SliderImg 
-                                        key={art.artId} 
-                                        thumbnailUrl={require(`${art.thumbnailUrl}`)} 
-                                        videoUrl={require(`${art.videoUrl}`)}/>
-                                })}
+                                title = {genre.name}
+                                imgList = {genre.artList.map((art) => {
+                                    return <SliderImg 
+                                    key={art.artId} 
+                                    art={art}
+                                />
+                            })}
                             />
                         )
                     })}

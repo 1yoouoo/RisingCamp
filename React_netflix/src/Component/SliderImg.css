@@ -5,25 +5,26 @@
 }
 .slide-img-popup {
   width: 100%;
-  height: auto;
-  margin-right: 5px;
+  min-width: 250px;
+  position: relative;
 }
+
 .slide-img-popup:hover {
-  position: absolute;
-  /* display: none; */
-  width: 40%;
-  transform: translateY(-25%);
+  transform: scale(1.2) translateY(-25%);
   z-index: 5;
   border: 1px solid red;
 }
 .slide-img-popup:hover ~
 .img-popup-top{
-  border-radius: 5px;
   position: relative;
 }
-
+.popup-video-wrapper {
+  position: relative;
+}
 .popup-video {
   width: 100%;
+  height: auto;
+  border-radius: 5px;
 }
 
 

@@ -1,5 +1,7 @@
 import "./SliderImg.css";
 
+
+
 const SliderImg = (props) => {
   return (
     <div className="slide-img-popup-wrapper">
@@ -14,7 +16,7 @@ const SliderImg = (props) => {
               </div>
             </div>
           </div>
-          {/* <div className="img-popup-bottom">
+          <div className="img-popup-bottom">
             <div className="bottom1">
               <div className="bottom1-left">
                 <div>icon</div>
@@ -42,7 +44,7 @@ const SliderImg = (props) => {
               <div>회차 및 상세정보</div>
               <div>더보기</div>
             </div>
-          </div> */}
+          </div>
         </div>
     </div>
   );

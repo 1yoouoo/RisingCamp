@@ -8,8 +8,8 @@ const SliderImg = (props) => {
       <div className="slide-img-popup">
           <div className="img-popup-top">
             <div className="popup-video-wrapper">
-              <video className="popup-video" autoplay playsInline muted>
-                <source src={props.contentVideoUrl} type="video/mp4" />
+              <video className="popup-video" autoPlay playsInline muted>
+                <source src={props.videoUrl} type="video/mp4" />
               </video>
               <div className="popup-video-mute">
                 <div className="mute">mute</div>

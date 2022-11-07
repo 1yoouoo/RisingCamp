@@ -1,9 +1,28 @@
 import "./Mainbody.css"
 import Slider from "./Slider"
 import SliderImg from "./SliderImg";
-import datas from "./slider.json"
+
+const getRecommenedGenreList = () => {
+    return {
+        recommenedGenreList: [{
+                genreId : 1,
+                name : '드라마',
+                artList: [
+                    {
+                        artId : "101",
+                        thumbnailUrl : "./img/slider1ImgItem1.webp",
+                        videoUrl : "./img/video/BreakingBadVideo.mov",
+
+                    }
+                ]
+
+            }
+        ]
+    }
+}
 
 const Mainbody = () => {
+    const datas = getRecommenedGenreList()
     return (
         <div className="mainview-container">
             <div className="mainview">
@@ -12,17 +31,17 @@ const Mainbody = () => {
                     <span className="main-img-gradient"></span>
                 </span>
                 <div className="slider-wrapper">
-                    {datas.map(( data ) => {
+                    {datas.recommenedGenreList.map(( genre ) => {
                         return (
                             <Slider 
-                                title = {data.title}
-                                imgList = {data.contentList.map((content) => {
-                                    return <SliderImg 
-                                    key={content.contentId} 
-                                    contentImgUrl={require(`${content.contentImgUrl}`)} 
-                                    contentVideoUrl={require(`${content.contentVideoUrl}`)}/>
+                                key={genre.genreId}
+                                    title = {genre.name}
+                                    imgList = {genre.artList.map((art) => {
+                                        return <SliderImg 
+                                        key={art.artId} 
+                                        thumbnailUrl={require(`${art.thumbnailUrl}`)} 
+                                        videoUrl={require(`${art.videoUrl}`)}/>
                                 })}
-                                key={data.groupId}
                             />
                         )
                     })}

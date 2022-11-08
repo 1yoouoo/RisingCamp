@@ -32,6 +32,12 @@ const API = {
         }
     },
     getArt: (artId) => {
+        if((artId || '').length < 1) {
+            console.log('Api.js ;;getArt 요청하지 마세요!!!!')
+            return {};
+        }
+        
+        // console.log('Api.js ;;getArt 요청 해주세요!!!!')
         return  {
             artId : 101,
             title: '이상한 변호사 우영우',

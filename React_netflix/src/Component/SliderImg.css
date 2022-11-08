@@ -1,7 +1,7 @@
 .slide-img-popup-wrapper {
   width: 30%;
   margin-right: 3px;
-  border: 1px solid green;
+  /* border: 1px solid green; */
 }
 .slide-img-popup {
   width: 100%;
@@ -12,7 +12,7 @@
 .slide-img-popup:hover {
   transform: scale(1.2) translateY(-25%);
   z-index: 5;
-  border: 1px solid red;
+  /* border: 1px solid red; */
 }
 .slide-img-popup:hover ~
 .img-popup-top{
@@ -37,12 +37,13 @@
 
 
 .popup-video-mute {
+  opacity: 0;
   /* Position */
   position: absolute;
   right: 10px;
   bottom: 10px;
   z-index: 2;
-
+  
   /* Center the content */
   align-items: center;
   display: flex;
@@ -68,6 +69,7 @@
 
 .img-popup-bottom {
   background-color: black;
+  display: none;
 }
 
 

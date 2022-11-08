@@ -9,7 +9,7 @@ const SliderImg = (props) => {
         <div className="slide-img-popup">
             <div className="img-popup-top">
               <div className="popup-video-wrapper">
-                <video className="popup-video" autoPlay playsInline muted>
+                <video className="popup-video" playsInline muted>
                   <source src={require(`${art.videoUrl}`)} type="video/mp4" />
                 </video>
                 <div className="popup-video-mute">

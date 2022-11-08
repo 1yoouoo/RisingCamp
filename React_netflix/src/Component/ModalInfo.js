@@ -2,6 +2,10 @@ import ModalEpisodeList from "./ModalEpisodeList"
 import "./ModalInfo.css"
 
 const ModalInfo = ({ art }) => {
+    if(art == null) {
+        return (<></>)
+    }
+    
     return (
         <>
             <div className='preview-modal-info'> 

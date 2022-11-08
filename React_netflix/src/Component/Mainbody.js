@@ -2,7 +2,7 @@ import "./Mainbody.css"
 import Slider from "./Slider"
 import SliderImg from "./SliderImg";
 import Modal from "./Modal";
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import API from './../Api/Api';
 
 
@@ -15,6 +15,7 @@ const Mainbody = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
+    
 
     const datas = API.getRecommenedGenreList()
     return (

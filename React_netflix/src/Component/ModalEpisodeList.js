@@ -11,8 +11,8 @@ const ModalEpisodeList = ({ art }) => {
             <div className="episodeList-wrapper">
                 {episodeList.map(( episode ) => {
                     return (
-                        <>
-                            <div className="episode" key={episode.episodeId}>
+                        <div key={episode.episodeId}>
+                            <div className="episode" >
                                 <div className="episodeNumber">
                                     {episode.episodeNumber}
                                 </div>
@@ -31,7 +31,7 @@ const ModalEpisodeList = ({ art }) => {
                                     </div>
                                 </div>
                             </div>
-                        </>
+                        </div>
                     )
                 } )}
             </div>

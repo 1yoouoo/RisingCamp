@@ -49,20 +49,13 @@
 
 .preview-modal-close {
     position: absolute;
-    top: 1%;
-    right: 18%;
+    top: 7%;
+    right: 19%;
     margin-left: 5px;
-    border: 1px solid #fff;
-    border-radius: 9999px;
-    height: 2rem;
-    width: 2rem;
-
-    /* Center the content */
+    color: black;
     align-items: center;
     display: flex;
     justify-content: center;
-    /* Add a dark background */
-    background-color: rgba(0, 0, 0, 0.4);
 }
 
 .preview-modal-info {

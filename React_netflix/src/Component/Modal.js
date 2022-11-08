@@ -7,9 +7,6 @@ const Modal = (props) => {
   const { open, close, artId } = props;
   const art = API.getArt(artId);
 
-  console.log(`artId: ${artId}`)
-  console.log(`title: ${art.title}`)
-
   return (
     <div className={open ? 'openModal modal' : 'modal'}>
         {open ? (

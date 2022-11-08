@@ -48,7 +48,34 @@ const API = {
             genreDescriptionList : ['힐링', '감명을 주는', '드라마 장르'],
             episodeList : [
                 {
-                    
+                    episodeId : 10101,
+                    episodeNumber : 1,
+                    episodeThumbnail : './img/episodeImg/10101.jpeg',
+                    episodeSubject : '이상한 변호사 우영우',
+                    episodeSummary : '변호사 우영우의 첫 출근 날. 아군이 되어줄 동료와 냉소적인 상사, 그리고 오랜 지인을 만난다. 첫 사건으로는 노부부 폭행 사건을 맡게 되고.',
+                    episodeDuration : '77'
+
+
+                },
+                {
+                    episodeId : 10102,
+                    episodeNumber : 2,
+                    episodeThumbnail : "./img/episodeImg/10102.jpeg",
+                    episodeSubject : '흘러내린 웨딩드레스',
+                    episodeSummary : '딸의 결혼식에서 민망한 사고가 터지자 호텔을 고소한 신부의 아버지. 준호는 영우에게 고래 이야기는 점심시간에만 하자고 제안한다.',
+                    episodeDuration : '69'
+
+
+                },
+                {
+                    episodeId : 10103,
+                    episodeNumber : 2,
+                    episodeThumbnail : "./img/episodeImg/10103.jpeg",
+                    episodeSubject : '펭수로 하겠습니다',
+                    episodeSummary : '형제를 둘러싼 비극적인 사건으로 한 가족이 가슴 아픈 진실을 마주한다. 영우는 의뢰인과 소통해보려 애쓴다.',
+                    episodeDuration : '69'
+
+
                 },
             ]
         }

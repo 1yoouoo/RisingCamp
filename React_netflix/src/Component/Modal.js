@@ -24,6 +24,9 @@ const Modal = (props) => {
                         <div className='preview-modal-close' onClick={close}>
                             <button onClick={close}></button>
                         </div>
+                        <div className='preview-modal-gradient-wrapper'>
+                            <div className='preview-modal-gradient'></div>
+                        </div>
                     </div>
                     <ModalInfo art ={art}/>
                 </div>

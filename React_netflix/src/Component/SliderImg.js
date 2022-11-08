@@ -9,9 +9,10 @@ const SliderImg = (props) => {
         <div className="slide-img-popup">
             <div className="img-popup-top">
               <div className="popup-video-wrapper">
-                <video className="popup-video" playsInline muted>
+                {/* <video className="popup-video" playsInline muted>
                   <source src={require(`${art.videoUrl}`)} type="video/mp4" />
-                </video>
+                </video> */}
+                <img className="popup-video" src={require(`${art.thumbnailUrl}`)} alt=""/>
                 <div className="popup-video-mute">
                   <div className="mute">mute</div>
                 </div>

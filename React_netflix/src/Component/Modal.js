@@ -1,6 +1,7 @@
 import React from 'react';
 import "./Modal.css" 
 import API from './../Api/Api';
+import ModalInfo from './ModalInfo';
 
 const Modal = (props) => {
   const { open, close, artId } = props;
@@ -20,13 +21,11 @@ const Modal = (props) => {
                         <video autoPlay playsInline muted>
                             <source src={require(`${'./img/video/BreakingBadVideo.mov'}`)} type="video/mp4"/>
                         </video>
+                        <div className='preview-modal-close' onClick={close}>
+                            <button onClick={close}></button>
+                        </div>
                     </div>
-                    <div className='preview-modal-close'>
-                        <button onClick={close}>close</button>
-                    </div>
-                    <div className='preview-modal-info'>
-                        {art.title}
-                    </div>
+                    <ModalInfo art ={art}/>
                 </div>
             </>
         ) : null}

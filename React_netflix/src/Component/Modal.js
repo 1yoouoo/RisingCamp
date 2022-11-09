@@ -3,7 +3,7 @@ import "./Modal.css"
 import API from './../Api/Api';
 import ModalInfo from './ModalInfo';
 
-
+//mouse over leave
 const Modal = (props) => {
   const { open, close, artId } = props;
   const [art, setArt] = useState()

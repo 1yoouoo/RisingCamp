@@ -117,7 +117,7 @@ const API = {
     
                 },
                 {
-                    genreId : 2,
+                    genreId : 3,
                     name : '애니',
                     artList: [
                         {
@@ -182,7 +182,6 @@ const API = {
             return {};
         }
         
-        // console.log('Api.js ;;getArt 요청 해주세요!!!!')
         return  {
             artId : 101,
             title: '이상한 변호사 우영우',

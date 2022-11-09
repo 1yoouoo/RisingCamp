@@ -1,8 +1,16 @@
 import "./MainHeader.css"
-
+import { useState, useEffect } from "react"
 const MainHeader = () => {
+    const [scrollPosition, setScrollposition] = useState(0);
+    const updateScroll = () => {
+        setScrollposition(window.scrollY || document.documentElement.scrollTop);
+    }
+    useEffect(()=>{
+        window.addEventListener('scroll', updateScroll);
+    });
+
     return (
-        <div className="pinning-header">
+        <div className={scrollPosition < 50 ? "pinning-header" : "moving-header"}>
             <div className="pinning-header-container" style={{top: "0px", position: "relative", background: "transparent"}}>
                 <div className="main-header has-billboard menu-navigation" role="navigation">
                 <span className="mainHeaderNfLogo" >

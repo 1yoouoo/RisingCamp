@@ -12,19 +12,27 @@ html, body {
 
 .pinning-header {
     height: 70px;
-    position: absolute;
+    position: fixed;
+    z-index: 101;
     width: 100vw;
 }
-
-.pinning-header .pinning-header-container .main-header {
+.moving-header {
+    height: 70px;
+    position: fixed;
+    z-index: 101;
+    width: 100vw;
+    background-color: rgb(22, 21, 21);
+    transition: 1s;
+}
+.pinning-header-container .main-header {
     z-index: 2;
 }
 
-.pinning-header .menu-navigation {
+.menu-navigation {
     background-image: linear-gradient(180deg,rgba(0,0,0,.7) 10%,transparent);
 }
 
-.pinning-header .main-header {
+.main-header {
     align-items: center;
     display: flex;
     font-size: 1.2rem;
@@ -36,12 +44,12 @@ html, body {
 }
 
 @media screen and (min-width: 950px){
-    .pinning-header .main-header .logo {
+    .main-header .logo {
     font-size: 25px;
     }
 }
 
-.pinning-header .main-header .logo {
+.main-header .logo {
     color: #e50914;
     cursor: pointer;
     display: inline-block;
@@ -64,7 +72,7 @@ html, body {
     margin-left: 18px;
 }
 
-.pinning-header .secondary-navigation {
+.secondary-navigation {
     align-items: center;
     display: flex;
     flex-grow: 1;
@@ -94,13 +102,13 @@ a {
 }
 } */
 
-.pinning-header .tabbed-primary-navigation .navigation-tab a.current {
+.tabbed-primary-navigation .navigation-tab a.current {
     color: #fff;
     cursor: default;
     font-weight: 500;
 }
 
-.pinning-header .tabbed-primary-navigation .navigation-tab a {
+.tabbed-primary-navigation .navigation-tab a {
     align-items: center;
     color: #e5e5e5;
     display: flex;

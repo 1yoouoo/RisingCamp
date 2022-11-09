@@ -4,30 +4,30 @@
   position: relative;
   width: 100%;
 }
-/* icon 넣기 ;; */
-.select-arrow::after {
-  color: #fff;
-  top: 50%;
-  transform: translateY(-50%);
-  right: 10px;
-  font-family: 'Font Awesome 5 Free';
-  content: '\f101';
-  pointer-events: none;
+.faGlobe {
   position: absolute;
-}
+  top: 10px;
+  left: 3px;
 
+}
+.faCaretDown {
+  position: absolute;
+  top: 7px;
+  right: 5px;
+}
+.ui-select-wrapper {
+  border-radius: 5px;
+  overflow: hidden;
+}
 .ui-select.medium {
   background: rgba(0,0,0,.4);
-  border: 1px solid #aaa;
   color: #fff;
   font-size: 0.875rem;
   line-height: 1.3em;
   white-space: nowrap;
-  padding: 8px 22px;
+  padding: 6px 4px 6px 14px;
   text-indent: 0;
   font-size: 0.825rem;
-  padding-left: 1.375rem;
-  padding-right: 1.375rem;
 }
 
 .ui-select {

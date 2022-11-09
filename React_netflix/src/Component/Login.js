@@ -1,6 +1,13 @@
+import { useEffect, useRef, useState } from "react"
 import "./Login.css"
-
 const Login = () => {
+    const [inputValue, setInputValue] = useState();
+    const handleChangeValue = () => {
+        setInputValue(inputValue)
+    }
+    const handleSubmit = () => {
+        console.log(inputValue)
+    }
 
     return (
         <div id="appMountPoint">
@@ -29,12 +36,11 @@ const Login = () => {
                                     <div className="nfInputPlacement">
                                         <div className="nfEmailPhoneControls">
                                             <label className="input_id" >
-                                                <input type="text" className="nfTextField hasText" id="id_userLoginId" />
+                                                <input type="text" className="nfTextField hasText" id="id_userLoginId" value={handleChangeValue}/>
                                                 <label className="placeLabel-email">Email or phone number</label>
                                             </label>
-                                            <div className="ui-select-wrapper country-select">
-                                            </div>
                                         </div>
+                                        <div className="inputError">Please enter a valid email.</div>
                                     </div>
                                 </div>
                                 <div className="nfInput nfPasswordInput login-input login-input-password">
@@ -46,9 +52,10 @@ const Login = () => {
                                             </label>
                                             <button id="id_password_toggle" type="button" className="nfPasswordToggle" title="Show Password">SHOW</button>
                                         </div>
+                                        <div className="inputError">Please enter a valid email.</div>
                                     </div>
                                 </div>
-                                <button className="btn login-button btn-submit btn-small" type="submit" autoComplete="off" tabIndex="0">
+                                <button className="btn login-button btn-submit btn-small" type="submit" autoComplete="off" tabIndex="0" onClick={handleSubmit}>
                                     Sign In
                                 </button>
                                 

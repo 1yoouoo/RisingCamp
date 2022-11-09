@@ -1,23 +1,35 @@
-.select-arrow {
-    display: inline-block;
-    position: relative;
-    width: 100%;
-  }
-  
-  .ui-select.medium {
-    background: rgba(0,0,0,.4);
-    border: 1px solid #aaa;
-    color: #fff;
-    font-size: 0.875rem;
-    line-height: 1.3em;
-    white-space: nowrap;
-    padding: 8px 22px;
-    text-indent: 0;
-    font-size: 0.825rem;
-    padding-left: 1.375rem;
-    padding-right: 1.375rem;
-  }
 
-  .ui-select {
-    display: inline-block;
-  }
+.select-arrow {
+  display: inline-block;
+  position: relative;
+  width: 100%;
+}
+/* icon 넣기 ;; */
+.select-arrow::after {
+  color: #fff;
+  top: 50%;
+  transform: translateY(-50%);
+  right: 10px;
+  font-family: 'Font Awesome 5 Free';
+  content: '\f101';
+  pointer-events: none;
+  position: absolute;
+}
+
+.ui-select.medium {
+  background: rgba(0,0,0,.4);
+  border: 1px solid #aaa;
+  color: #fff;
+  font-size: 0.875rem;
+  line-height: 1.3em;
+  white-space: nowrap;
+  padding: 8px 22px;
+  text-indent: 0;
+  font-size: 0.825rem;
+  padding-left: 1.375rem;
+  padding-right: 1.375rem;
+}
+
+.ui-select {
+  display: inline-block;
+}

@@ -114,26 +114,7 @@ ul.structural>li {
   width: 1px;
 }
 
-.ui-select-wrapper .select-arrow {
-  display: inline-block;
-  position: relative;
-  width: 100%;
-}
 
-.footer-card .dark .ui-select-wrapper .select-arrow.prefix:before {
-  color: #999;
-  top: 17px;
-  content: \e896;
-}
-
-.ui-select-wrapper .select-arrow.prefix:before {
-  color: #000;
-  font-family: nf-icon;
-  font-size: 16px;
-  pointer-events: none;
-  position: absolute;
-  left: 15px;
-}
 
 .lang-selection-container .ui-select-wrapper .select-arrow.prefix .ui-select.medium {
   text-indent: 0;

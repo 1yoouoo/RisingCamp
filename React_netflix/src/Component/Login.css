@@ -303,7 +303,9 @@ input {
 .nfPasswordInput .nfTextField {
     background: transparent;
 }
-
+.input_id {
+    /* position: relative; */
+}
 .hybrid-login-form .nfTextField {
     border: 0;
     border-radius: 4px;

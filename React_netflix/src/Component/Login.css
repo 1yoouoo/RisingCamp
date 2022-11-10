@@ -386,6 +386,17 @@ input {
 }
 
 /* inputError */
+.invalidLogin {
+    background-color: #e87c03;
+    border-radius: 4px;
+    font-size: 14px;
+    padding: 10px 20px;
+    margin: 0 0 16px;
+}
+.invalidLogin div{
+    color: #fff;    
+}
+
 .inputErrorEmail { 
     position: sticky;
     color: #e87c03;

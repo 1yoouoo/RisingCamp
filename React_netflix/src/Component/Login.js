@@ -9,6 +9,7 @@ const Login = () => {
     const isValidEmail = inputValue.email.length > 4;
     const isValidPassword = inputValue.password.length > 4;
     const [touched, setTouched] = useState(false)
+    const [loginError, setLoginError] = useState(false)
     const navigate = useNavigate()
 
     const onChange = (e) => {
@@ -18,13 +19,15 @@ const Login = () => {
         })
     }
 
-    const handleSubmit = () => {
+    const handleSubmit = (e) => {
         if(inputValue.email === '12345' && inputValue.password === '12345') {
+            setLoginError(false)
             navigate('/main')
         }
         else {
-            alert('로그인 실패!')
+            setLoginError(true)
         }
+        e.preventDefault();
     }
 
 
@@ -50,6 +53,11 @@ const Login = () => {
                     <div className="login-content login-form hybrid-login-form hybrid-login-form-signup">
                         <div className="hybrid-login-form-main">
                             <h1>Sign In</h1>
+                            <div className="invalidLogin" style={loginError ? {display : 'block'} : {display : 'none'}}>
+                                <div>
+                                    Sorry, we can't find an account with this number. Please make sure to select the correct country code or sign in with email.
+                                </div>
+                            </div>
                             <form method="post" className="login-form">
                                 <div className="nfInput nfEmailPhoneInput login-input login-input-email">
                                     <div className="nfInputPlacement">
@@ -75,7 +83,7 @@ const Login = () => {
                                         <div className="inputErrorPassword" style={touched ? (isValidPassword ? {opacity : "0"} : {opacity : "1"}) : {opacity : "0"}}>Your password must contain between 4 and 60 characters.</div>
                                     </div>
                                 </div>
-                                <button className="btn login-button btn-submit btn-small" type="submit" onClick={handleSubmit}>
+                                <button className="btn login-button btn-submit btn-small" onClick={handleSubmit}>
                                     Sign In
                                 </button>
                                 

@@ -364,7 +364,7 @@ input {
 
 }
 
-.nfTextField:focus ~ .placeLabel-password, .nfTextField:required ~ .placeLabel-password {
+.nfTextField:focus ~ .placeLabel-password, .nfTextField:valid ~ .placeLabel-password {
     top: 18px;
     bottom: 10px;
     left: 8px;

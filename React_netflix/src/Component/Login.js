@@ -1,4 +1,5 @@
-import { useEffect, useRef, useState } from "react"
+import { useState } from "react"
+import { useNavigate } from "react-router-dom";
 import "./Login.css"
 const Login = () => {
     const [inputValue, setInputValue] = useState({
@@ -8,6 +9,7 @@ const Login = () => {
     const isValidEmail = inputValue.email.length > 4;
     const isValidPassword = inputValue.password.length > 4;
     const [touched, setTouched] = useState(false)
+    const navigate = useNavigate()
 
     const onChange = (e) => {
         setInputValue({
@@ -17,6 +19,12 @@ const Login = () => {
     }
 
     const handleSubmit = () => {
+        if(inputValue.email === '12345' && inputValue.password === '12345') {
+            navigate('/main')
+        }
+        else {
+            alert('로그인 실패!')
+        }
     }
 
 
@@ -67,7 +75,7 @@ const Login = () => {
                                         <div className="inputErrorPassword" style={touched ? (isValidPassword ? {opacity : "0"} : {opacity : "1"}) : {opacity : "0"}}>Your password must contain between 4 and 60 characters.</div>
                                     </div>
                                 </div>
-                                <button className="btn login-button btn-submit btn-small" type="submit" onSubmit={handleSubmit}>
+                                <button className="btn login-button btn-submit btn-small" type="submit" onClick={handleSubmit}>
                                     Sign In
                                 </button>
                                 

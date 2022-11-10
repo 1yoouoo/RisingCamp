@@ -74,6 +74,7 @@ label {
 .nfInput .nfInputPlacement{
     position: relative;
     max-width: 500px;
+
 }
 
 @media only screen and (min-width: 950px) and (max-width: 1449px){

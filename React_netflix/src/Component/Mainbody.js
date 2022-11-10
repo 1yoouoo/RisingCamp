@@ -17,6 +17,8 @@ const Mainbody = () => {
     const closeModal = () => {
         setModalOpen(false);
     };
+    const [videoStarts, setVideoStarts] = useState(true);
+    const videoEnds = () => (setVideoStarts(!videoStarts))
     
 
     const datas = API.getRecommenedGenreList()
@@ -25,14 +27,19 @@ const Mainbody = () => {
             <div className="mainview">
                 <Modal artId={myArtId} open={modalOpen} close={closeModal}/>
                 <div className="main" >
-                    <img className="main-img" src={require('./img/Netflix-Main-img.jpeg')} alt="Main Img"/>
+                    <div className="main-img-video-wrapper">
+                        <video className="main-video" autoPlay playsInline muted onEnded={() => videoEnds()}>
+                            <source src={require(`${'./img/video/main-video.mov'}`)} type="video/mp4"/>
+                        </video>
+                        <img className="main-img" src={require('./img/Netflix-Main-img.jpeg')} style={videoStarts ? {opacity : '0'} : {opacity : '1'}} alt="Main Img"/>
+                    </div>
                     <span className="main-img-gradient"></span>
                     <div className="main-img-info-wrapper">
                         <div className="main-img-info">
-                            <div className="main-img-title">
+                            <div className={videoStarts ? "main-img-title-videoStarts" : "main-img-title-videoEnds"}>
                                 <img src={require('./img/Netflix-Main-img-title.png')} alt=""/>
                             </div>
-                            <div className="main-img-subtitle">
+                            <div className={videoStarts ? "main-img-subtitle-videoStarts" : "main-img-subtitle-videoEnds"}>
                                 <div>지금 시청하세요</div>
                                 <div>
                                     시카고의 잘나가는 재무 컨설턴트 마티는 가족과 함께 미주리 주 오자크로 이사한다. 목적은 하나, 파트너가 횡령한 마약 조직의 돈 5억 달러를 돈세탁하는 것.

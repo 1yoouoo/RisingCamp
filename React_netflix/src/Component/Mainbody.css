@@ -3,18 +3,33 @@ html, body {
     margin: 0;
     height: 200vw;
 }
-.main{
-    position: relative;
-    display: flex;
-    flex-direction: column;
-}
 .mainview-container {
     position: relative;
     z-index: 0;
     height: 100%;
     width: 100%;
 }
-
+.main{
+    position: relative;
+    display: flex;
+    flex-direction: column;
+}
+.main-img-video-wrapper {
+    position: relative;
+    width: 100vw;
+    height: 60vw;
+}
+.main-img {
+    position: absolute;
+    opacity: 1;
+    width: 100vw;
+    z-index: 2;
+}
+.main-video {
+    position: absolute;
+    width: 100%;
+    z-index: 2;
+}
 
 
 
@@ -24,7 +39,7 @@ html, body {
     position: absolute;
     /* bottom: 35%; */
     width: 36%;
-    top: 18%;
+    top: 35%;
     left: 4%;
     display: flex;
     flex-direction: column;
@@ -32,18 +47,39 @@ html, body {
     z-index: 10;
     
 }
-.main-img-title {
+.main-img-title-videoStarts {
     position: relative;
     width: 100%;
     margin-bottom: 8%;
     margin-top: 30px;
+    transform: translateY(100%);
+    transition-delay: 1s;
+    transition: 2s ease;
 }
-.main-img-subtitle div:nth-child(1){
+.main-img-title-videoEnds {
+    position: relative;
+    width: 85%;
+    margin-bottom: 8%;
+    margin-top: 30px;
+    transform: translateY(10%);
+    transition-delay: 1s;
+    transition: 2s ease;
+}
+.main-img-subtitle-videoEnds {
+    opacity: 1;
+}
+.main-img-subtitle-videoStarts {
+    opacity: 0;
+    transition-delay: 1s;
+}
+.main-img-subtitle-videoStarts div:nth-child(1),
+.main-img-subtitle-videoStarts div:nth-child(1){
     padding-bottom: 10px;
     font-size: 1.6vw;
     font-weight: bold;
 }
-.main-img-subtitle div:nth-child(2){
+.main-img-subtitle-videoStarts div:nth-child(2),
+.main-img-subtitle-videoEnds div:nth-child(2){
     font-size: 1.1vw;
 }
 .main-img-info-button-wrapper {
@@ -89,6 +125,7 @@ html, body {
     height: 100px;
     bottom: 0;
     background-image: linear-gradient(to top, black 50%, transparent);
+    z-index: 3;
     
 }
 .volatile-billboard-animations-container {
@@ -195,4 +232,5 @@ html, body {
 .slider-wrapper {
     position: relative;
     top: -100px;
+    z-index: 3;
 }

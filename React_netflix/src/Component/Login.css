@@ -331,7 +331,7 @@ input {
 
 }
 
-.nfTextField:focus ~ .placeLabel-email {
+.nfTextField:focus ~ .placeLabel-email, .nfTextField:valid ~ .placeLabel-email {
     top: 25px;
     bottom: 10px;
     left: 8px;
@@ -357,14 +357,14 @@ input {
     font-size: 14px;
     left: 10px;
     position: absolute;
-    top: 22px;
-    transform: translateY(-30%);
+    top: 20px;
+    transform: translateY(-20%);
     transition: font .1s ease,top .1s ease, transform .1s ease;
     pointer-events: none;
 
 }
 
-.nfTextField:focus ~ .placeLabel-password {
+.nfTextField:focus ~ .placeLabel-password, .nfTextField:required ~ .placeLabel-password {
     top: 18px;
     bottom: 10px;
     left: 8px;
@@ -386,7 +386,7 @@ input {
 }
 
 /* inputError */
-.inputErrorEmail {
+.inputErrorEmail { 
     position: sticky;
     color: #e87c03;
     margin-bottom: -6px;
@@ -407,7 +407,6 @@ input {
     width: 100%;
 }
 .inputErrorPassword {
-    opacity: 0.5;
     position: sticky;
     color: #e87c03;
     margin-bottom: -6px;

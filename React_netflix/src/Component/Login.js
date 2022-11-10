@@ -47,7 +47,7 @@ const Login = () => {
                                     <div className="nfInputPlacement">
                                         <div className="nfEmailPhoneControls">
                                             <label className="input_id" >
-                                                <input type="text" className="nfTextField hasText" id="id_userLoginId" name="email" value={inputValue.email} onChange={onChange} onBlur={() => setTouched(true)}/>
+                                                <input type="text" className="nfTextField hasText" id="id_userLoginId" name="email" required value={inputValue.email} onChange={onChange} onBlur={() => setTouched(true)}/>
                                                 
                                                 <label className="placeLabel-email">Email or phone number</label>
                                             </label>
@@ -59,7 +59,7 @@ const Login = () => {
                                     <div className="nfInputPlacement">
                                         <div className="nfPasswordControls">
                                             <label className="input_id">
-                                                <input type="password" className="nfTextField" id="id_password" name="password"  value={inputValue.password} onChange={onChange} onBlur={() => setTouched(true)} />
+                                                <input type="password" className="nfTextField" id="id_password" name="password"  required value={inputValue.password} onChange={onChange} onBlur={() => setTouched(true)} />
                                                 <label className="placeLabel-password">Password</label>
                                             </label>
                                             <button id="id_password_toggle" type="button" className="nfPasswordToggle" title="Show Password">SHOW</button>

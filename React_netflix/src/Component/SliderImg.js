@@ -7,7 +7,7 @@ import { faPlay, faPlus, faThumbsUp, faThumbsDown } from '@fortawesome/free-soli
 const SliderImg = (props) => {
   const { art, onClick } = props;
   const [isHovering, setIsHovering] = useState(false)
-
+  
   return (
     <>
       <div className={isHovering ? "slide-img-popup-wrapper-hover" : "slide-img-popup-wrapper"} onClick={onClick} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => setIsHovering(false)}>
@@ -44,8 +44,8 @@ const SliderImg = (props) => {
                   </div>
                 </div>
                 <div className="bottom2">
-                  <div>{Math.floor(art.interestPercent)}%일치</div>
-                  <div>{art.ageRestricted}+</div>
+                  <div className="interestPercent">{Math.floor(art.interestPercent)}% 일치</div>
+                  <svg id="maturity-rating" viewBox="0 0 100 100"><path id="FIll---Red" fill={art.ageRestricted.fill} d={art.ageRestricted.background}></path><path id="18" fill="#FFFFFE" d={art.ageRestricted.number}></path></svg>
                   <div>에피소드 {art.episodeCount}개</div>
                   <div>{art.videoQuality}</div>
                 </div>

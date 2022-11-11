@@ -9,7 +9,7 @@ const API = {
                         {
                             artId : 101,
                             thumbnailUrl : "./img/slider1ImgItem1.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 96.3,
                             ageRestricted: 15,
                             episodeCount: 16,
@@ -19,7 +19,7 @@ const API = {
                         {
                             artId : 102,
                             thumbnailUrl : "./img/slider1ImgItem2.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -29,7 +29,7 @@ const API = {
                         {
                             artId : 103,
                             thumbnailUrl : "./img/slider1ImgItem3.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -39,7 +39,7 @@ const API = {
                         {
                             artId : 104,
                             thumbnailUrl : "./img/slider1ImgItem4.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -49,7 +49,7 @@ const API = {
                         {
                             artId : 105,
                             thumbnailUrl : "./img/slider1ImgItem5.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -66,7 +66,7 @@ const API = {
                         {
                             artId : 201,
                             thumbnailUrl : "./img/slider2ImgItem1.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 96.3,
                             ageRestricted: 15,
                             episodeCount: 16,
@@ -76,7 +76,7 @@ const API = {
                         {
                             artId : 202,
                             thumbnailUrl : "./img/slider2ImgItem2.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -86,7 +86,7 @@ const API = {
                         {
                             artId : 203,
                             thumbnailUrl : "./img/slider2ImgItem3.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -96,7 +96,7 @@ const API = {
                         {
                             artId : 204,
                             thumbnailUrl : "./img/slider2ImgItem4.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -106,7 +106,7 @@ const API = {
                         {
                             artId : 205,
                             thumbnailUrl : "./img/slider2ImgItem5.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -123,7 +123,7 @@ const API = {
                         {
                             artId : 301,
                             thumbnailUrl : "./img/slider3ImgItem1.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 96.3,
                             ageRestricted: 15,
                             episodeCount: 16,
@@ -133,7 +133,7 @@ const API = {
                         {
                             artId : 302,
                             thumbnailUrl : "./img/slider3ImgItem2.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -143,7 +143,7 @@ const API = {
                         {
                             artId : 303,
                             thumbnailUrl : "./img/slider3ImgItem3.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -153,7 +153,7 @@ const API = {
                         {
                             artId : 304,
                             thumbnailUrl : "./img/slider3ImgItem4.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -163,7 +163,7 @@ const API = {
                         {
                             artId : 305,
                             thumbnailUrl : "./img/slider3ImgItem5.webp",
-                            videoUrl : "./img/video/WooYoungWoo.mov",
+                            videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted: 18,
                             episodeCount: 5,
@@ -186,7 +186,7 @@ const API = {
             artId : 101,
             title: '이상한 변호사 우영우',
             thumbnailUrl : "./img/slider1ImgItem2.webp",
-            videoUrl : "./img/video/WooYoungWoo.mov",
+            videoUrl : "./img/video/main-video.mov",
             interestPercent : 92.3,
             productionYear : 2022,
             ageRestricted : 18,

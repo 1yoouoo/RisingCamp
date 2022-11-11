@@ -1,19 +1,22 @@
 import "./SliderImg.css";
+import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
 import { faPlay, faPlus, faThumbsUp, faThumbsDown } from '@fortawesome/free-solid-svg-icons'
 
 
 const SliderImg = (props) => {
   const { art, onClick } = props;
+  const [isHovering, setIsHovering] = useState(false)
+
   return (
     <>
-      <div className="slide-img-popup-wrapper" onClick={onClick}>
+      <div className={isHovering ? "slide-img-popup-wrapper-hover" : "slide-img-popup-wrapper"} onClick={onClick} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => setIsHovering(false)}>
         <div className="slide-img-popup">
             <div className="img-popup-top">
               <div className="popup-video-wrapper">
-                {/* <video className="popup-video" playsInline muted>
+                <video className="popup-video" playsInline muted>
                   <source src={require(`${art.videoUrl}`)} type="video/mp4" />
-                </video> */}
+                </video>
                 <img className="popup-img" src={require(`${art.thumbnailUrl}`)} alt=""/>
                 <div className="popup-video-mute">
                   <div className="mute">mute</div>

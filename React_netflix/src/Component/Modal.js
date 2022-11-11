@@ -23,7 +23,7 @@ const Modal = (props) => {
                 <div className='preview-modal-container'>
                     <div className='preview-modal-player'>
                         <video autoPlay playsInline muted>
-                            <source src={require(`${'./img/video/WooYoungWoo.mov'}`)} type="video/mp4"/>
+                            <source src={require(`${'./img/video/main-video.mov'}`)} type="video/mp4"/>
                         </video>
                         <div className='preview-modal-close' >
                             <button onClick={close}>close</button>

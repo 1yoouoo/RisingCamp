@@ -29,7 +29,7 @@ const API = {
                             },
                             episodeCount: 16,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['진심 어린', '드라마'],
+                            genreDescriptionList: ['진심 어린', '드라마', '니아빠'],
                         },
                         {
                             artId : 102,
@@ -43,7 +43,7 @@ const API = {
                             },
                             episodeCount: 5,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['마약', '드라마'],
+                            genreDescriptionList: ['마약', '드라마', '니엄마'],
                         },
                         {
                             artId : 103,

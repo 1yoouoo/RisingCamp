@@ -1,7 +1,7 @@
 import "./SliderImg.css";
 import { useState } from "react";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome'
-import { faPlay, faPlus, faThumbsUp, faThumbsDown, faHighDefinition} from '@fortawesome/free-solid-svg-icons'
+import { faPlay, faPlus, faThumbsUp, faThumbsDown, faCircleInfo, faChevronRight} from '@fortawesome/free-solid-svg-icons'
 
 
 const SliderImg = (props) => {
@@ -55,8 +55,9 @@ const SliderImg = (props) => {
                   })}
                 </div>
                 <div className="bottom4">
+                  <FontAwesomeIcon icon={faCircleInfo} className="faCircleInfo" size='lg'/>
                   <div>회차 및 상세정보</div>
-                  <div>더보기</div>
+                  <FontAwesomeIcon icon={faChevronRight} className="faChevronRight" size='sm'/>
                 </div>
               </div>
             </div>

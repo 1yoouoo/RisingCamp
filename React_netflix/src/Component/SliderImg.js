@@ -5,13 +5,19 @@ import { faPlay, faPlus, faThumbsUp, faThumbsDown, faCircleInfo, faChevronRight}
 
 
 const SliderImg = (props) => {
-  const { art, onClick } = props;
+  const { art, onClick, openModal } = props;
   const [isHovering, setIsHovering] = useState(false)
+  const [thumbsUpList,setThumbsUpList] = useState([
+    
+  ])
+  const onClickThumbsUp = () => {
+    alert('click!')
+  }
   
   return (
     <>
       <div className={isHovering ? "slide-img-popup-wrapper-hover" : "slide-img-popup-wrapper"} onClick={onClick} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => setIsHovering(false)}>
-        <div className="slide-img-popup">
+        <div className="slide-img-popup" onClick={() => openModal()}>
             <div className="img-popup-top">
               <div className="popup-video-wrapper">
                 <video className="popup-video" playsInline muted>
@@ -36,7 +42,7 @@ const SliderImg = (props) => {
                   </div>
                   <div className="bottom1-right">
                     <div>
-                      <FontAwesomeIcon icon={faThumbsUp} className="faThumbsUp" />
+                      <FontAwesomeIcon icon={faThumbsUp} className="faThumbsUp" onClick={onClickThumbsUp} />
                     </div>
                     <div>
                       <FontAwesomeIcon icon={faThumbsDown} className="faThumbsDown" />

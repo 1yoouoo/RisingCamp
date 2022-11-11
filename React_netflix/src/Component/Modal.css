@@ -43,7 +43,7 @@
 }
 
 .preview-modal-player video {
-    min-width: 850px;
+    max-width: 850px;
     border-radius: 10px;
 }
 

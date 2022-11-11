@@ -62,7 +62,7 @@ const Mainbody = () => {
                         </div>
                     </div>
                 </div>
-                <div className="slider-wrapper" onClick={openModal}>
+                <div className="slider-wrapper">
                     {datas.recommenedGenreList.map(( genre ) => {
                         return (
                             <Slider 
@@ -72,7 +72,9 @@ const Mainbody = () => {
                                     return <SliderImg 
                                     key={art.artId}
                                     art={art}
-                                    onClick={() => {setMyArtId(art.artId)}}
+                                    openModal={openModal}
+                                    onClick={() => {setMyArtId(art.artId)}
+                                }
                                 />
                             })}
                             />

@@ -1,6 +1,8 @@
 .slide-img-popup-wrapper {
   margin-right: 3px;
   border-radius: 3px;
+  cursor: pointer;
+
 }
 .slide-img-popup {
   max-width: 250px;
@@ -164,6 +166,8 @@
   justify-content: center;
   /* Add a dark background */
   background-color: rgba(0, 0, 0, 0.4);
+  cursor: pointer;
+  z-index: 100;
 }
 
 .bottom2 {

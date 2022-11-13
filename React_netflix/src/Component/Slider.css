@@ -1,5 +1,37 @@
 .rowContent {
-    display: block;
-    width: 100vw;
+  display: block;
+  width: 100vw;
 }
-
+.handle-wrapper {
+  display: flex;
+  margin: 0;
+  padding: 0;
+}
+.handle {
+  display: flex;
+  padding: 2%;
+  align-items: center;
+  justify-content: center;
+  z-index: 2;
+  background-color: rgba(0, 0, 0, 0.4);
+}
+.handle:hover .faChevronLeft {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.handle:hover .faChevronRight {
+  transform: scale(1.2);
+  cursor: pointer;
+}
+.faChevronLeft {
+  font-size: 30px;
+  margin: auto;
+  position: absolute;
+  display: block;
+}
+.faChevronRight {
+  font-size: 30px;
+  margin: auto;
+  position: absolute;
+  display: block;
+}

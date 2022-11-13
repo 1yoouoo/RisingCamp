@@ -8,16 +8,16 @@ const SliderImg = (props) => {
   const { art, onClick, openModal } = props;
   const [isHovering, setIsHovering] = useState(false)
   const [thumbsUpList,setThumbsUpList] = useState([
-    
   ])
-  const onClickThumbsUp = () => {
+  const onClickThumbsUp = (e) => {
+    e.stopPropagation();
     alert('click!')
   }
   
   return (
     <>
       <div className={isHovering ? "slide-img-popup-wrapper-hover" : "slide-img-popup-wrapper"} onClick={onClick} onMouseOver={() => {setIsHovering(true)}} onMouseLeave={() => setIsHovering(false)}>
-        <div className="slide-img-popup" onClick={() => openModal()}>
+        <div className="slide-img-popup" onClick={() => openModal()} onMouseOver={e => e.target.play()} onMouseOut={e => e.target.pause()}>
             <div className="img-popup-top">
               <div className="popup-video-wrapper">
                 <video className="popup-video" playsInline muted>
@@ -41,8 +41,8 @@ const SliderImg = (props) => {
                     </div>
                   </div>
                   <div className="bottom1-right">
-                    <div>
-                      <FontAwesomeIcon icon={faThumbsUp} className="faThumbsUp" onClick={onClickThumbsUp} />
+                    <div onClick={onClickThumbsUp}>
+                      <FontAwesomeIcon icon={faThumbsUp} className="faThumbsUp" />
                     </div>
                     <div>
                       <FontAwesomeIcon icon={faThumbsDown} className="faThumbsDown" />

@@ -30,7 +30,7 @@ const MainHeader = () => {
                             <a className="menu-trigger" role="button" href="todo" tabIndex="0">메뉴</a>
                         </li>
                         <li className="navigation-tab">
-                            <a className="current active" href="/">홈</a>
+                            <a className="current active" href="/main">홈</a>
                         </li>
                         <li className="navigation-tab">
                             <a href="/">시리즈</a>
@@ -42,7 +42,7 @@ const MainHeader = () => {
                             <a href="/">NEW! 요즘 대세 콘텐츠</a>
                         </li>
                         <li className="navigation-tab">
-                            <a href="/">내가 찜한 콘텐츠</a>
+                            <a href="/likeList">내가 찜한 콘텐츠</a>
                         </li>
                         <li className="navigation-tab">
                             <a href="/">언어별로 찾아보기</a>

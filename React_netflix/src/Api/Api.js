@@ -29,11 +29,11 @@ const API = {
                             },
                             episodeCount: 16,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['진심 어린', '드라마', '니아빠'],
+                            genreDescriptionList: ['폭력적인', '어두운', '스릴러'],
                         },
                         {
                             artId : 102,
-                            thumbnailUrl : "./img/slider1ImgItem2.webp",
+                            thumbnailUrl : "./img/slider1ImgItem2.jpeg",
                             videoUrl : "./img/video/main-video.mov",
                             interestPercent: 92.3,
                             ageRestricted:  {
@@ -43,7 +43,7 @@ const API = {
                             },
                             episodeCount: 5,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['마약', '드라마', '니엄마'],
+                            genreDescriptionList: ['불길한', '어두운', '마약'],
                         },
                         {
                             artId : 103,
@@ -57,7 +57,7 @@ const API = {
                             },
                             episodeCount: 5,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['마약', '드라마'],
+                            genreDescriptionList: ['아드레날린', '흥미진진', '스릴러'],
                         },
                         {
                             artId : 104,
@@ -71,7 +71,7 @@ const API = {
                             },
                             episodeCount: 5,
                             videoQuality: 'HD',
-                            genreDescriptionList: ['마약', '드라마'],
+                            genreDescriptionList: ['마약', '액션', '스릴러'],
                         },
                         {
                             artId : 105,

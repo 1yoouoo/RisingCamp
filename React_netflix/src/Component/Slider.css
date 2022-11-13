@@ -6,6 +6,7 @@
   display: flex;
   margin: 0;
   padding: 0;
+  z-index: -3;
 }
 .handle {
   display: flex;
@@ -28,6 +29,7 @@
   margin: auto;
   position: absolute;
   display: block;
+  
 }
 .faChevronRight {
   font-size: 30px;

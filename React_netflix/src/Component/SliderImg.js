@@ -108,11 +108,6 @@ const SliderImg = (props) => {
                   size="lg"
                 />
                 <div>회차 및 상세정보</div>
-                <FontAwesomeIcon
-                  icon={faChevronRight}
-                  className="faChevronRight"
-                  size="sm"
-                />
               </div>
             </div>
           </div>

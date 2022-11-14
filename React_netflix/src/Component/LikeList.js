@@ -9,7 +9,7 @@ const LikeList = () => {
         <div>
           <h2>내가 찜한 콘텐츠</h2>
         </div>
-        <div>List</div>
+        <div>asd</div>
       </div>
     </>
   );

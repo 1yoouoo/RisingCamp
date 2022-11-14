@@ -7,10 +7,12 @@ import {
   faThumbsUp,
   faThumbsDown,
   faCircleInfo,
-  faChevronRight,
 } from "@fortawesome/free-solid-svg-icons";
+import { useDispatch, useSelector } from "react-redux";
 
 const SliderImg = (props) => {
+  const artId = useSelector((state) => state.artId);
+  const dispatch = useDispatch();
   const { art, onClick, openModal } = props;
   const [isHovering, setIsHovering] = useState(false);
   const [thumbsUpList, setThumbsUpList] = useState([]);
@@ -36,8 +38,8 @@ const SliderImg = (props) => {
         <div
           className="slide-img-popup"
           onClick={() => openModal()}
-          onMouseOver={(e) => e.target.play()}
-          onMouseOut={(e) => e.target.pause()}
+          // onMouseOver={(e) => e.target.play()}
+          // onMouseOut={(e) => e.target.pause()}
         >
           <div className="img-popup-top">
             <div className="popup-video-wrapper">
@@ -66,7 +68,11 @@ const SliderImg = (props) => {
                   </div>
                 </div>
                 <div className="bottom1-right">
-                  <div onClick={onClickThumbsUp}>
+                  <div
+                    onClick={() => {
+                      dispatch({ type: "ThumbsUp " });
+                    }}
+                  >
                     <FontAwesomeIcon icon={faThumbsUp} className="faThumbsUp" />
                   </div>
                   <div>
@@ -107,7 +113,7 @@ const SliderImg = (props) => {
                   className="faCircleInfo"
                   size="lg"
                 />
-                <div>회차 및 상세정보</div>
+                <div>회차 및 상세정보 {artId}</div>
               </div>
             </div>
           </div>

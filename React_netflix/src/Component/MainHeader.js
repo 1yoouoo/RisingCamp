@@ -2,6 +2,7 @@ import "./MainHeader.css";
 import { useState, useEffect } from "react";
 import { useSelector } from "react-redux";
 const MainHeader = () => {
+  const likeCount = useSelector((state) => state.likeCount);
   const [scrollPosition, setScrollposition] = useState(0);
   const updateScroll = () => {
     setScrollposition(window.scrollY || document.documentElement.scrollTop);
@@ -150,6 +151,7 @@ const MainHeader = () => {
                       fill="currentColor"
                     ></path>
                   </svg>
+                  <span className="likeCount">{likeCount}</span>
                 </button>
               </span>
             </div>

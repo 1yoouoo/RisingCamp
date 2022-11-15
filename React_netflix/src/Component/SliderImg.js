@@ -14,11 +14,10 @@ const SliderImg = (props) => {
   const dispatch = useDispatch();
   const { art, onClick, openModal } = props;
   const [isHovering, setIsHovering] = useState(false);
-  const [thumbsUpList, setThumbsUpList] = useState([]);
+
   const onClickThumbsUp = (e) => {
     e.stopPropagation();
     dispatch({ type: "ThumbsUp" });
-    alert("click!");
   };
 
   return (

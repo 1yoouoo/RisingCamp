@@ -9,7 +9,6 @@ import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
 
 const Mainbody = () => {
-  const testArt = useSelector((state) => state.testArt);
   const [modalOpen, setModalOpen] = useState(false);
   const [myArtId, setMyArtId] = useState("");
   const openModal = () => {
@@ -114,13 +113,6 @@ const Mainbody = () => {
               />
             );
           })}
-        </div>
-        <div>
-          <Slider
-            key={1}
-            title={"찜한목록"}
-            imgList={<SliderImg key={testArt.artId} art={testArt} />}
-          />
         </div>
       </div>
     </div>

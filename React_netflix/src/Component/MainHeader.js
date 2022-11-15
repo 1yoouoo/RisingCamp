@@ -1,12 +1,12 @@
 import "./MainHeader.css";
 import { useState, useEffect } from "react";
-import { useDispatch } from "react-redux";
+import { useSelector } from "react-redux";
 const MainHeader = () => {
   const [scrollPosition, setScrollposition] = useState(0);
   const updateScroll = () => {
     setScrollposition(window.scrollY || document.documentElement.scrollTop);
   };
-  const dispatch = useDispatch();
+  const artId = useSelector((state) => state.artId);
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
   });
@@ -62,19 +62,13 @@ const MainHeader = () => {
               <a href="/">NEW! 요즘 대세 콘텐츠</a>
             </li>
             <li className="navigation-tab">
-              <a href="/likeList">내가 찜한 콘텐츠</a>
+              <div>내가 찜한 콘텐츠</div>
             </li>
             <li className="navigation-tab">
-              <a href="/Reduxtest">언어별로 찾아보기</a>
+              <a href="/">언어별로 찾아보기</a>
             </li>
             <li className="navigation-tab">
-              <div
-                onClick={() => {
-                  dispatch({ type: "PLUS" });
-                }}
-              >
-                REDUX
-              </div>
+              <div>REDUX {artId}</div>
             </li>
           </ul>
 

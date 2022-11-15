@@ -85,6 +85,7 @@ body {
   right: 4%;
   top: 0;
   font-size: 10px;
+  transition: 2s ease;
 }
 
 /* searchIcon */
@@ -124,17 +125,22 @@ body {
   z-index: 1;
   left: 37px;
 }
-.secondary-navigation-searchFocused .search-icon {
+.searchInput {
+  opacity: 0;
+  width: 0;
+  height: 0;
+  transition: 0.5s ease-in;
 }
-.secondary-navigation-searchFocused .searchInput {
+.searchInput-searchFocused {
   position: relative;
   height: 30px;
-  min-width: 200px;
+  width: 200px;
   background-color: #000;
   border: 1px solid #fff;
   padding: 0 0 0 40px;
   font-size: 13px;
   outline: none;
+  transition: 0.5s ease-in;
 }
 
 /* Kids */

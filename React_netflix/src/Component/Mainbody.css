@@ -1,8 +1,7 @@
 html,
 body {
-  height: 100%;
   margin: 0;
-  height: 200vw;
+  height: 300vw;
 }
 .mainview-container {
   position: relative;

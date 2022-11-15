@@ -7,6 +7,7 @@ import API from "./../Api/Api";
 import { FontAwesomeIcon } from "@fortawesome/react-fontawesome";
 import { faPlay, faCircleInfo } from "@fortawesome/free-solid-svg-icons";
 import { useSelector } from "react-redux";
+import Footer from "./Footer";
 
 const Mainbody = () => {
   const [modalOpen, setModalOpen] = useState(false);
@@ -115,6 +116,7 @@ const Mainbody = () => {
           })}
         </div>
       </div>
+      <Footer />
     </div>
   );
 };

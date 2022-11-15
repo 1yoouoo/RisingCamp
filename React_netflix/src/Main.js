@@ -3,7 +3,7 @@ import MainHeader from "./Component/MainHeader";
 import "./Main.css";
 import { createStore } from "redux";
 import { Provider } from "react-redux";
-
+// STORE
 function reducer(currentState, action) {
   if (currentState === undefined) {
     return {
@@ -11,8 +11,8 @@ function reducer(currentState, action) {
     };
   }
   const newState = { ...currentState };
-  if (action.type === "ThumbsUp") {
-    console.log("ThumbsUp");
+  if (action.type === "PLUS") {
+    newState.artId++;
   }
   return newState;
 }

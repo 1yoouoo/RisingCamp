@@ -1,7 +1,10 @@
 import MainHeader from "./MainHeader";
 import "./LikeList.css";
+import { useDispatch } from "react-redux";
 
 const LikeList = () => {
+  const dispatch = useDispatch();
+
   return (
     <>
       <MainHeader />
@@ -9,7 +12,13 @@ const LikeList = () => {
         <div>
           <h2>내가 찜한 콘텐츠</h2>
         </div>
-        <div>asd</div>
+        <div
+          onClick={() => {
+            dispatch({ type: "PLUS" });
+          }}
+        >
+          asd
+        </div>
       </div>
     </>
   );

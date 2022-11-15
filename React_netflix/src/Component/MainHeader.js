@@ -1,10 +1,12 @@
 import "./MainHeader.css";
 import { useState, useEffect } from "react";
+import { useDispatch } from "react-redux";
 const MainHeader = () => {
   const [scrollPosition, setScrollposition] = useState(0);
   const updateScroll = () => {
     setScrollposition(window.scrollY || document.documentElement.scrollTop);
   };
+  const dispatch = useDispatch();
   useEffect(() => {
     window.addEventListener("scroll", updateScroll);
   });
@@ -64,6 +66,15 @@ const MainHeader = () => {
             </li>
             <li className="navigation-tab">
               <a href="/Reduxtest">언어별로 찾아보기</a>
+            </li>
+            <li className="navigation-tab">
+              <div
+                onClick={() => {
+                  dispatch({ type: "PLUS" });
+                }}
+              >
+                REDUX
+              </div>
             </li>
           </ul>
 

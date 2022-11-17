@@ -11,7 +11,6 @@ const Tier = ({ data }) => {
       <div>
         total win ratio{" "}
         {Math.round((data.wins / (data.wins + data.losses)) * 1000) / 10}%
-        <div>recent win ratio</div>
       </div>
     </div>
   );

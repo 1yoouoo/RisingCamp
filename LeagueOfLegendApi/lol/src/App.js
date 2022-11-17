@@ -9,50 +9,37 @@ function App() {
   const [summonerNameData, setSummonerNameData] = useState({});
   const [summonerSoloLeagueData, setSummonerSoloLeagueData] = useState([]);
   const [summonerFlexLeagueData, setSummonerFlexLeagueData] = useState([]);
+  const [matchData, setMatchData] = useState([]);
   const ApiKey = "RGAPI-2e0de1b6-bda0-4c5d-84f5-19173b23ed63";
-  function searchForSummoner(event) {
-    let NameApiCallString =
-      "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" +
-      summonerName +
-      "?api_key=" +
-      ApiKey;
+
+  async function searchForSummoner(event) {
+    const NameApiCallString = `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${ApiKey}`;
 
     //name 보냄 -> id, puuid 받음
-    axios.get(NameApiCallString).then(function (nameData) {
-      setSummonerNameData(nameData.data);
-      const summonerId = nameData.data.id;
-      const summonerPuuid = nameData.data.puuid;
-      let LeagueApiCallString =
-        "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/" +
-        summonerId +
-        "?api_key=" +
-        ApiKey;
-      // id 보냄 -> leaguedata 받음
-      axios.get(LeagueApiCallString).then(function (leagueData) {
-        setSummonerSoloLeagueData(leagueData.data[0]);
-        setSummonerFlexLeagueData(leagueData.data[2]);
-        let MatchIdApiCallString =
-          "https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/" +
-          summonerPuuid +
-          "/ids?start=0&count=100&api_key=" +
-          ApiKey;
-        // puuid 보냄 -> matchid 받음
-        axios.get(MatchIdApiCallString).then(function (matchIdList) {
-          let matchId = [];
-          matchIdList.data.map((i) => matchId.push(i));
-          console.log(matchId);
-          let MatchApiCallString =
-            "https://asia.api.riotgames.com/lol/match/v5/matches/" +
-            matchId[0] +
-            "?api_key=" +
-            ApiKey;
-          // matchId 보냄 -> matchdata 받음
-          axios.get(MatchApiCallString).then(function (matchData) {
-            console.log(matchData.data);
-          });
-        });
-      });
-    });
+    const nameData = await axios.get(NameApiCallString);
+    setSummonerNameData(nameData.data);
+    const summonerId = nameData.data.id;
+    const summonerPuuid = nameData.data.puuid;
+    const LeagueApiCallString = `https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/${summonerId}?api_key=${ApiKey}`;
+
+    // id 보냄 -> leaguedata 받음
+    const leagueData = await axios.get(LeagueApiCallString);
+    const summonerSolo = leagueData.data[0];
+    const summonerFlex = leagueData.data[2];
+    setSummonerSoloLeagueData(summonerSolo);
+    setSummonerFlexLeagueData(summonerFlex);
+    const MatchIdApiCallString = `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=0&count=100&api_key=${ApiKey}`;
+
+    // puuid 보냄 -> matchid 받음
+    const matchIdList = await axios.get(MatchIdApiCallString);
+    // console.log(matchIdList.data);
+    const MatchApiCallString = `https://asia.api.riotgames.com/lol/match/v5/matches/${matchIdList.data[0]}?api_key=${ApiKey}`;
+
+    // matchId 보냄 -> matchdata 받음
+    const matchData = await axios.get(MatchApiCallString);
+    setMatchData(matchData.data);
+    setMatchData(matchData.data.info);
+    console.log(matchData.data.info);
   }
   return (
     <>
@@ -90,7 +77,26 @@ function App() {
               </div>
             </div>
 
-            <div className="contentMain"></div>
+            <div className="contentMain">
+              <div className="contentMainLeft">
+                <div className="contentSummary">
+                  <div>?전?승?패</div>
+                  <div>ratio Graph</div>
+                  <div>winRatiobyteam</div>
+                  <div>Graph blue : , Red :</div>
+                  <div>winrationbygameLength</div>
+                  <div>graph 100%-0%</div>
+                  <div>KDA</div>
+                </div>
+                <div className="contentGameList">gameList</div>
+              </div>
+              <div className="contentMainRight">
+                <div>{matchData.gameDuration}</div>
+                <div>1</div>
+                <div>2</div>
+                <div>3</div>
+              </div>
+            </div>
           </>
         ) : (
           <div>no data</div>

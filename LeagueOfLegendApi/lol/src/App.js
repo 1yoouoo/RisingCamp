@@ -31,16 +31,25 @@ function App() {
       axios.get(LeagueApiCallString).then(function (leagueData) {
         setSummonerSoloLeagueData(leagueData.data[0]);
         setSummonerFlexLeagueData(leagueData.data[2]);
-        let MatchApiCallString =
+        let MatchIdApiCallString =
           "https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/" +
           summonerPuuid +
           "/ids?start=0&count=100&api_key=" +
           ApiKey;
         // puuid 보냄 -> matchid 받음
-        axios.get(MatchApiCallString).then(function (matchData) {
+        axios.get(MatchIdApiCallString).then(function (matchIdList) {
           let matchId = [];
-          matchData.data.map((i) => matchId.push(i));
+          matchIdList.data.map((i) => matchId.push(i));
           console.log(matchId);
+          let MatchApiCallString =
+            "https://asia.api.riotgames.com/lol/match/v5/matches/" +
+            matchId[0] +
+            "?api_key=" +
+            ApiKey;
+          // matchId 보냄 -> matchdata 받음
+          axios.get(MatchApiCallString).then(function (matchData) {
+            console.log(matchData.data);
+          });
         });
       });
     });

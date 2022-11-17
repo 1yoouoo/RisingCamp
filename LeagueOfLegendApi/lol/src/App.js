@@ -2,13 +2,14 @@ import { useState } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Components/Header";
+import Tier from "./Components/Tier";
 
 function App() {
   const [summonerName, setSummonerName] = useState("");
   const [summonerNameData, setSummonerNameData] = useState({});
   const [summonerSoloLeagueData, setSummonerSoloLeagueData] = useState([]);
   const [summonerFlexLeagueData, setSummonerFlexLeagueData] = useState([]);
-  const ApiKey = "RGAPI-8ce823fb-bd3d-4ff4-8e9f-586a00cbacb9";
+  const ApiKey = "RGAPI-2e0de1b6-bda0-4c5d-84f5-19173b23ed63";
   function searchForSummoner(event) {
     let NameApiCallString =
       "https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/" +
@@ -16,18 +17,31 @@ function App() {
       "?api_key=" +
       ApiKey;
 
-    axios.get(NameApiCallString).then(function (response) {
-      console.log(response);
-      setSummonerNameData(response.data);
-      const summonerId = response.data.id;
+    //name 보냄 -> id, puuid 받음
+    axios.get(NameApiCallString).then(function (nameData) {
+      setSummonerNameData(nameData.data);
+      const summonerId = nameData.data.id;
+      const summonerPuuid = nameData.data.puuid;
       let LeagueApiCallString =
         "https://kr.api.riotgames.com/lol/league/v4/entries/by-summoner/" +
         summonerId +
         "?api_key=" +
         ApiKey;
-      axios.get(LeagueApiCallString).then(function (response) {
-        setSummonerSoloLeagueData(response.data[0]);
-        setSummonerFlexLeagueData(response.data[2]);
+      // id 보냄 -> leaguedata 받음
+      axios.get(LeagueApiCallString).then(function (leagueData) {
+        setSummonerSoloLeagueData(leagueData.data[0]);
+        setSummonerFlexLeagueData(leagueData.data[2]);
+        let MatchApiCallString =
+          "https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/" +
+          summonerPuuid +
+          "/ids?start=0&count=100&api_key=" +
+          ApiKey;
+        // puuid 보냄 -> matchid 받음
+        axios.get(MatchApiCallString).then(function (matchData) {
+          let matchId = [];
+          matchData.data.map((i) => matchId.push(i));
+          console.log(matchId);
+        });
       });
     });
   }
@@ -61,44 +75,8 @@ function App() {
 
                 <div className="summonerDetail">
                   <h2 className="summonerName">{summonerNameData.name}</h2>
-                  <div className="soloTierWrapper">
-                    <div className="soloTierDetail">
-                      <div>ranked solo</div>
-                      <div>Tier : {summonerSoloLeagueData.tier}</div>
-                      <div>rank: {summonerSoloLeagueData.rank}</div>
-                      <div>losses: {summonerSoloLeagueData.losses}</div>
-                      <div>win :{summonerSoloLeagueData.wins}</div>
-                    </div>
-                    <div>
-                      total win ratio{" "}
-                      {Math.round(
-                        (summonerSoloLeagueData.wins /
-                          (summonerSoloLeagueData.wins +
-                            summonerSoloLeagueData.losses)) *
-                          1000
-                      ) / 10}
-                      %<div>recent win ratio</div>
-                    </div>
-                  </div>
-                  <div className="flexTierWrapper">
-                    <div className="flexTierDetail">
-                      <div>ranked flex</div>
-                      <div>Tier : {summonerFlexLeagueData.tier}</div>
-                      <div>rank: {summonerFlexLeagueData.rank}</div>
-                      <div>losses: {summonerFlexLeagueData.losses}</div>
-                      <div>win :{summonerFlexLeagueData.wins}</div>
-                    </div>
-                    <div>
-                      total win ratio{" "}
-                      {Math.round(
-                        (summonerFlexLeagueData.wins /
-                          (summonerFlexLeagueData.wins +
-                            summonerFlexLeagueData.losses)) *
-                          1000
-                      ) / 10}
-                      %<div>recent win ratio</div>
-                    </div>
-                  </div>
+                  <Tier data={summonerSoloLeagueData} />
+                  <Tier data={summonerFlexLeagueData} />
                 </div>
               </div>
             </div>

@@ -1,11 +1,13 @@
 import { useState } from "react";
 import "./App.css";
 import axios from "axios";
+import Header from "./Components/Header";
 
 function App() {
-  const [summonerName, setSummnerName] = useState("");
+  const [summonerName, setSummonerName] = useState("");
   const [summonerNameData, setSummonerNameData] = useState({});
-  const [summonerLeagueData, setSummonerLeagueData] = useState([]);
+  const [summonerSoloLeagueData, setSummonerSoloLeagueData] = useState([]);
+  const [summonerFlexLeagueData, setSummonerFlexLeagueData] = useState([]);
   const ApiKey = "RGAPI-8ce823fb-bd3d-4ff4-8e9f-586a00cbacb9";
   function searchForSummoner(event) {
     let NameApiCallString =
@@ -24,24 +26,17 @@ function App() {
         "?api_key=" +
         ApiKey;
       axios.get(LeagueApiCallString).then(function (response) {
-        setSummonerLeagueData(response.data[0]);
+        setSummonerSoloLeagueData(response.data[0]);
+        setSummonerFlexLeagueData(response.data[2]);
       });
     });
   }
   return (
     <>
-      <div className="header">
-        <div className="container">
-          <div className="logo">logo</div>
-          <div className="summonerInput">
-            <input
-              type="text"
-              onChange={(e) => setSummnerName(e.target.value)}
-            ></input>
-            <button onClick={(e) => searchForSummoner(e)}>Enter</button>
-          </div>
-        </div>
-      </div>
+      <Header
+        onChange={(e) => setSummonerName(e.target.value)}
+        onClick={(e) => searchForSummoner(e)}
+      />
 
       <div className="contentWrapper">
         {JSON.stringify(summonerNameData) !== "{}" ? (
@@ -66,11 +61,43 @@ function App() {
 
                 <div className="summonerDetail">
                   <h2 className="summonerName">{summonerNameData.name}</h2>
-                  <div>
-                    <div>Tier : {summonerLeagueData.tier}</div>
-                    <div>rank: {summonerLeagueData.rank}</div>
-                    <div>loses: {summonerLeagueData.losses}</div>
-                    <div>win :{summonerLeagueData.wins}</div>
+                  <div className="soloTierWrapper">
+                    <div className="soloTierDetail">
+                      <div>ranked solo</div>
+                      <div>Tier : {summonerSoloLeagueData.tier}</div>
+                      <div>rank: {summonerSoloLeagueData.rank}</div>
+                      <div>losses: {summonerSoloLeagueData.losses}</div>
+                      <div>win :{summonerSoloLeagueData.wins}</div>
+                    </div>
+                    <div>
+                      total win ratio{" "}
+                      {Math.round(
+                        (summonerSoloLeagueData.wins /
+                          (summonerSoloLeagueData.wins +
+                            summonerSoloLeagueData.losses)) *
+                          1000
+                      ) / 10}
+                      %<div>recent win ratio</div>
+                    </div>
+                  </div>
+                  <div className="flexTierWrapper">
+                    <div className="flexTierDetail">
+                      <div>ranked flex</div>
+                      <div>Tier : {summonerFlexLeagueData.tier}</div>
+                      <div>rank: {summonerFlexLeagueData.rank}</div>
+                      <div>losses: {summonerFlexLeagueData.losses}</div>
+                      <div>win :{summonerFlexLeagueData.wins}</div>
+                    </div>
+                    <div>
+                      total win ratio{" "}
+                      {Math.round(
+                        (summonerFlexLeagueData.wins /
+                          (summonerFlexLeagueData.wins +
+                            summonerFlexLeagueData.losses)) *
+                          1000
+                      ) / 10}
+                      %<div>recent win ratio</div>
+                    </div>
                   </div>
                 </div>
               </div>

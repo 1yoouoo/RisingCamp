@@ -1,18 +1,22 @@
-import { useState } from "react";
+import { useState, useEffect } from "react";
 import "./App.css";
 import axios from "axios";
 import Header from "./Components/Header";
 import Tier from "./Components/Tier";
+import Main from "./Main";
 
 function App() {
+  // setLosses(losses)
+  const [win, setWin] = useState(0);
+  const [losses, setLosses] = useState(0);
   const [summonerName, setSummonerName] = useState("");
   const [summonerNameData, setSummonerNameData] = useState({});
   const [summonerSoloLeagueData, setSummonerSoloLeagueData] = useState([]);
   const [summonerFlexLeagueData, setSummonerFlexLeagueData] = useState([]);
   const [matchData, setMatchData] = useState([]);
-  const ApiKey = "RGAPI-2e0de1b6-bda0-4c5d-84f5-19173b23ed63";
+  const ApiKey = "RGAPI-4b22f674-17bb-4abf-a572-37b2ddca1eef";
 
-  async function searchForSummoner(event) {
+  async function searchForSummoner() {
     const NameApiCallString = `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${ApiKey}`;
 
     //name 보냄 -> id, puuid 받음
@@ -25,21 +29,36 @@ function App() {
     // id 보냄 -> leaguedata 받음
     const leagueData = await axios.get(LeagueApiCallString);
     const summonerSolo = leagueData.data[0];
-    const summonerFlex = leagueData.data[2];
     setSummonerSoloLeagueData(summonerSolo);
-    setSummonerFlexLeagueData(summonerFlex);
     const MatchIdApiCallString = `https://asia.api.riotgames.com/lol/match/v5/matches/by-puuid/${summonerPuuid}/ids?start=0&count=100&api_key=${ApiKey}`;
 
     // puuid 보냄 -> matchid 받음
     const matchIdList = await axios.get(MatchIdApiCallString);
-    // console.log(matchIdList.data);
-    const MatchApiCallString = `https://asia.api.riotgames.com/lol/match/v5/matches/${matchIdList.data[0]}?api_key=${ApiKey}`;
 
-    // matchId 보냄 -> matchdata 받음
-    const matchData = await axios.get(MatchApiCallString);
-    setMatchData(matchData.data);
-    setMatchData(matchData.data.info);
-    console.log(matchData.data.info);
+    // console.log(matchIdList.data);
+    let newWin = 0;
+    let newLosses = 0;
+    for (let i = 0; i < 20; i++) {
+      const MatchApiCallString = `https://asia.api.riotgames.com/lol/match/v5/matches/${matchIdList.data[i]}?api_key=${ApiKey}`;
+      // matchId 보냄 -> matchdata 받음
+      const matchData = await axios.get(MatchApiCallString);
+      // console.log(matchIdList.data[i]);
+      setMatchData(matchData.data.info);
+      for (let j = 0; j < 10; j++) {
+        // 조회한 소환사이름이랑 동일하면
+        if (matchData.data.info.participants[j].summonerName === summonerName) {
+          if (matchData.data.info.participants[j].win === true) {
+            newWin = newWin + 1;
+          } else {
+            newLosses = newLosses + 1;
+          }
+        } else {
+        }
+      }
+    }
+    setWin(newWin);
+    setLosses(newLosses);
+    console.log(win, losses);
   }
   return (
     <>
@@ -72,34 +91,14 @@ function App() {
                 <div className="summonerDetail">
                   <h2 className="summonerName">{summonerNameData.name}</h2>
                   <Tier data={summonerSoloLeagueData} />
-                  <Tier data={summonerFlexLeagueData} />
                 </div>
               </div>
             </div>
 
-            <div className="contentMain">
-              <div className="contentMainLeft">
-                <div className="contentSummary">
-                  <div>?전?승?패</div>
-                  <div>ratio Graph</div>
-                  <div>winRatiobyteam</div>
-                  <div>Graph blue : , Red :</div>
-                  <div>winrationbygameLength</div>
-                  <div>graph 100%-0%</div>
-                  <div>KDA</div>
-                </div>
-                <div className="contentGameList">gameList</div>
-              </div>
-              <div className="contentMainRight">
-                <div>{matchData.gameDuration}</div>
-                <div>1</div>
-                <div>2</div>
-                <div>3</div>
-              </div>
-            </div>
+            <Main win={win} losses={losses} />
           </>
         ) : (
-          <div>no data</div>
+          <div>소환사 이름을 검색하세요 !</div>
         )}
       </div>
     </>

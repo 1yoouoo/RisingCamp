@@ -1,10 +1,15 @@
 const Tier = ({ data }) => {
+  // debugger;
   return (
     <div className="TierWrapper">
       <div className="TierDetail">
         <div>ranked solo</div>
         <div>Tier : {data.tier}</div>
-        <div>rank: {data.rank}</div>
+        <div>
+          <img src={`./img/${data.tier}.png`} alt="ㅁㄴㅇ" />
+          {/* <img src={require(`./img/GOLD.png`)} alt="ㅁㄴㅇ" /> */}
+          {data.rank}
+        </div>
         <div>losses: {data.losses}</div>
         <div>win :{data.wins}</div>
       </div>

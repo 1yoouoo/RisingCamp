@@ -53,9 +53,7 @@ body {
 }
 /* CONTENTMAIN */
 .contentMain {
-  border: 1px solid #000;
   display: flex;
-  margin: 30px;
 }
 .contentMainRight {
   display: flex;
@@ -64,7 +62,6 @@ body {
   border-right: 1px solid red;
 }
 .contentMainLeft {
-  width: 200px;
   border-right: 1px solid #000;
 }
 .contentSummary {

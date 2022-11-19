@@ -1,19 +1,10 @@
-import { useEffect } from "react";
-
-const Main = ({ win, losses }) => {
-  useEffect(() => {
-    console.log("전적 조회중");
-    console.log(win, losses);
-    return () => {
-      console.log("조회완료");
-    };
-  }, [win, losses]);
+const WinRatio = ({ wlkda }) => {
   return (
-    <div className="contentMain">
-      <div className="contentMainLeft">
+    <>
+      <div className="contentMain">
         <div className="contentSummary">
           <div>
-            {win + losses}전 {win}승 {losses}패
+            {wlkda.win + wlkda.losses}전 {wlkda.win}승 {wlkda.losses}패
           </div>
           <div>ratio Graph</div>
           <div>winRatiobyteam</div>
@@ -22,16 +13,9 @@ const Main = ({ win, losses }) => {
           <div>graph 100%-0%</div>
           <div>KDA</div>
         </div>
-        <div className="contentGameList">gameList</div>
       </div>
-      <div className="contentMainRight">
-        <div></div>
-        <div>1</div>
-        <div>2</div>
-        <div>3</div>
-      </div>
-    </div>
+    </>
   );
 };
 
-export default Main;
+export default WinRatio;

@@ -1,10 +1,16 @@
 * {
+  font-family: sans-serif;
+  color: #fff;
 }
 
 html,
 body {
   margin: 0;
   padding: 0;
+}
+
+input {
+  background-color: #000;
 }
 
 /* HEADER */
@@ -33,12 +39,13 @@ body {
 /* CONTENT */
 .contentWrapper {
   padding-top: 100px;
-  background-color: rgba(69, 69, 69, 0.538);
+  background-color: rgba(32, 45, 55, 0.9);
+
   width: 100%;
   height: 800px;
 }
 .contentHeader {
-  margin: 30px;
+  margin: 50px;
   border: 1px solid #000;
   /* padding: 30px; */
 }
@@ -50,6 +57,29 @@ body {
   width: 100%;
   display: flex;
   justify-content: space-between;
+}
+.summonerIcon {
+  width: 100px;
+  height: 100px;
+}
+.summonerIconImg img {
+  width: 100px;
+  height: 100px;
+  border-radius: 10px;
+}
+.summonerLevel {
+  position: relative;
+  text-align: center;
+  margin-top: -15px;
+}
+.summonerLevel span {
+  padding: 0px 8px;
+  font-size: 12px;
+  border-radius: 10px;
+  color: #fff;
+  background-color: rgb(32, 45, 55);
+  border: 1px solid #000;
+  font-family: sans-serif;
 }
 /* CONTENTMAIN */
 .contentMain {
@@ -65,4 +95,22 @@ body {
   border-right: 1px solid #000;
 }
 .contentSummary {
+}
+
+/* SUMMONERNAME */
+.summonerName {
+  color: #fff;
+  font-weight: 500;
+}
+
+/* TIER */
+.tierWrapper {
+  display: flex;
+}
+
+.winCount {
+  color: blue;
+}
+.lossesCount {
+  color: red;
 }

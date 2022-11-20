@@ -1,10 +1,11 @@
-const WinRatio = ({ wlkda }) => {
+const WinRatio = ({ matchDataDetail }) => {
   return (
     <>
       <div className="contentMain">
         <div className="contentSummary">
           <div>
-            {wlkda.win + wlkda.losses}전 {wlkda.win}승 {wlkda.losses}패
+            {matchDataDetail.wins + matchDataDetail.losses}전{" "}
+            {matchDataDetail.wins}승 {matchDataDetail.losses}패
           </div>
           <div>ratio Graph</div>
           <div>winRatiobyteam</div>

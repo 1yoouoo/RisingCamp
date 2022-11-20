@@ -1,6 +1,11 @@
 import Tier from "./Components/Tier";
+import WinRatio from "./WinRatio";
 
-const Test = ({ summonerNameData, summonerSoloLeagueData }) => {
+const Test = ({
+  summonerNameData,
+  summonerSoloLeagueData,
+  matchDataDetail,
+}) => {
   return (
     <div className="contentWrapper">
       {JSON.stringify(summonerNameData) !== "{}" ? (
@@ -26,6 +31,7 @@ const Test = ({ summonerNameData, summonerSoloLeagueData }) => {
               <div className="summonerDetail">
                 <h2 className="summonerName">{summonerNameData.name}</h2>
                 <Tier data={summonerSoloLeagueData} />
+                <WinRatio matchDataDetail={matchDataDetail} />
               </div>
             </div>
           </div>

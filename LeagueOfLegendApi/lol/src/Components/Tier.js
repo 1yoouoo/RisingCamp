@@ -6,20 +6,17 @@ const Tier = ({ data }) => {
         <>
           <div>
             <div>
-              {/* <img
-            src={"https://www.lolog.me/images/icon/" + data.tier + ".png"}
-            alt="ㅁㄴㅇ"
-          /> */}
-              {/* <img src={require(`./img/${data.tier}.png`)} alt="ㅁㄴㅇ" /> */}
+              <img
+                src={"https://www.lolog.me/images/icon/" + data.tier + ".png"}
+                alt="ㅁㄴㅇ"
+              />
             </div>
           </div>
           <div className="tierDetail">
-            <div>ranked solo</div>
+            <div className="tierTitle">Ranked Solo</div>
 
-            <div>
-              {data.tier}
-              {data.rank}
-            </div>
+            <span className="tierTier">{data.tier}</span>
+            <span className="tierRank"> {data.rank}</span>
             <div>
               {Math.round((data.wins / (data.wins + data.losses)) * 1000) / 10}%
             </div>

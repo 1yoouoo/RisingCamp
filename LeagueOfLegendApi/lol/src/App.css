@@ -10,19 +10,17 @@ body {
 }
 
 input {
-  background-color: #000;
 }
 
 /* HEADER */
 .header {
   position: fixed;
-  background-color: crimson;
+  background-color: #24292e;
   width: 100%;
   height: 80px;
 }
 .container {
   display: flex;
-  border: 1px solid #fff;
   justify-content: space-between;
   align-items: center;
 }
@@ -30,10 +28,23 @@ input {
   padding: 20px;
   width: 250px;
   height: 40px;
-  background-color: #eaffdf96;
+  font-size: 20px;
 }
 .summonerInput {
   margin-right: 20px;
+}
+.summonerInput input {
+  padding: 2px 25px;
+  border-top-left-radius: 15px;
+  border-bottom-left-radius: 15px;
+  border: none;
+}
+.summonerInput button {
+  color: black;
+  padding: 2px 15px;
+  border-top-right-radius: 15px;
+  border: none;
+  border-bottom-right-radius: 15px;
 }
 
 /* CONTENT */
@@ -45,18 +56,19 @@ input {
   height: 800px;
 }
 .contentHeader {
-  margin: 50px;
-  border: 1px solid #000;
+  margin: 50px 170px;
   /* padding: 30px; */
 }
 /* SUMMONER INFO */
 .summonerInfo {
   display: flex;
+  align-items: center;
 }
 .summonerDetail {
   width: 100%;
   display: flex;
   justify-content: space-between;
+  align-items: center;
 }
 .summonerIcon {
   width: 100px;
@@ -101,6 +113,7 @@ input {
 .summonerName {
   color: #fff;
   font-weight: 500;
+  margin-left: 10px;
 }
 
 /* TIER */
@@ -109,8 +122,49 @@ input {
 }
 
 .winCount {
-  color: blue;
+  color: rgb(57, 174, 241);
 }
 .lossesCount {
-  color: red;
+  color: rgb(243, 59, 59);
+}
+
+.tierDetail {
+  margin: auto;
+  text-align: center;
+}
+.tierTitle {
+  font-size: 0.8em;
+  font-weight: 500;
+  color: rgb(169, 166, 166);
+}
+/* WINRATIO */
+.donutGraph {
+  width: calc(100% - 10px);
+  padding-bottom: calc(100% - 10px);
+  margin: 0 auto;
+  border-radius: 50%;
+  position: relative;
+  text-align: center;
+  transition: background 0.3s ease-in-out;
+  background: conic-gradient(
+    rgb(57, 174, 241) 0% 32%,
+    rgb(243, 59, 59) 32% 100%
+  );
+}
+.donutGraph::before {
+  color: #fff;
+  width: 70%;
+  padding: calc(35% - 0.64vw) 0;
+  background: #264057;
+  border-radius: 50%;
+  position: absolute;
+  left: 15%;
+  top: 15%;
+  display: block;
+  content: attr(data-percent) "%";
+  transform: skew(-0.03deg);
+  margin: auto;
+  font-size: 1.1vw;
+  font-size: 2vw;
+  padding: calc(35% - 1.3vw) 0;
 }

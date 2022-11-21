@@ -1,3 +1,4 @@
+import { useState } from "react";
 import Tier from "./Components/Tier";
 import WinRatio from "./WinRatio";
 
@@ -5,6 +6,7 @@ const Test = ({
   summonerNameData,
   summonerSoloLeagueData,
   matchDataDetail,
+  isLoading,
 }) => {
   return (
     <div className="contentWrapper">
@@ -31,7 +33,12 @@ const Test = ({
               <div className="summonerDetail">
                 <h2 className="summonerName">{summonerNameData.name}</h2>
                 <Tier data={summonerSoloLeagueData} />
-                <WinRatio matchDataDetail={matchDataDetail} />
+
+                {!isLoading ? (
+                  <WinRatio matchDataDetail={matchDataDetail} />
+                ) : (
+                  <div>로딩중 ..</div>
+                )}
               </div>
             </div>
           </div>

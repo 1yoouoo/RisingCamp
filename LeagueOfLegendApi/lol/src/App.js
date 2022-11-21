@@ -23,6 +23,7 @@ function App() {
     setIsLoading(true);
     //name 보냄 -> id, puuid 받음
     const NameApiCallString = `https://kr.api.riotgames.com/lol/summoner/v4/summoners/by-name/${summonerName}?api_key=${ApiKey}`;
+    console.log(NameApiCallString);
     const nameData = await axios.get(NameApiCallString);
 
     setSummonerNameData(nameData.data);
@@ -45,7 +46,7 @@ function App() {
     // puuid 보냄 -> matchid 받음
     const matchIdList = await axios.get(MatchIdApiCallString);
 
-    // console.log(matchIdList.data);
+    console.log(matchIdList.data);
     let wins = 0;
     let losses = 0;
     let kills = 0;

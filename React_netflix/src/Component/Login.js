@@ -1,6 +1,8 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
 import "./Login.css";
+import KakaoLogin from "react-kakao-login";
+
 const Login = () => {
   const [inputValue, setInputValue] = useState({
     email: "",
@@ -27,6 +29,20 @@ const Login = () => {
       setLoginError(true);
     }
     e.preventDefault();
+  };
+  //KAKAO
+  const KAKAO_JS_KEY = "6e77bd46bb262f465b1b15f65c140ec0";
+
+  // 소셜 로그인 성공
+  const socialLoginSuccess = (res) => {
+    console.log("소셜 로그인 성공");
+    console.log(res);
+  };
+
+  // 소셜 로그인 실패
+  const socialLoginFail = (res) => {
+    console.log("소셜 로그인 실패");
+    console.log(res);
   };
 
   return (
@@ -158,6 +174,24 @@ const Login = () => {
                 >
                   Sign In
                 </button>
+                <KakaoLogin
+                  style={{
+                    width: "100%",
+                    height: "49px",
+                    color: "rgb(60, 30, 30)",
+                    backgroundColor: "rgb(255, 235, 0)",
+                    border: "1px solid transparent",
+                    borderRadius: "3px",
+                    fontSize: "16px",
+                    textAlign: "center",
+                  }}
+                  // rest api 키가 아닌 js 키를 사용해야 합니다.
+                  jsKey={KAKAO_JS_KEY}
+                  onSuccess={(res) => socialLoginSuccess(res)}
+                  onFailure={(res) => socialLoginFail(res)}
+                  // getPofile 속성을 주지 않으면 유저 정보를 받을 수 없습니다.
+                  getProfile={true}
+                ></KakaoLogin>
 
                 <div className="hybrid-login-form-help">
                   <div className="ui-binary-input login-remember-me">

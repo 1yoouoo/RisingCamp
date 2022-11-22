@@ -41,3 +41,7 @@ sketch
 ### video ###
 *.mp4
 *.mov
+
+
+### TEXT ###
+*.txt

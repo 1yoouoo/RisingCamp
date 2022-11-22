@@ -31,11 +31,13 @@ const Login = () => {
     e.preventDefault();
   };
   //KAKAO
-  const KAKAO_JS_KEY = "6e77bd46bb262f465b1b15f65c140ec0";
+  const KAKAO_JS_KEY = "";
 
   // 소셜 로그인 성공
   const socialLoginSuccess = (res) => {
     console.log("소셜 로그인 성공");
+    navigate("/main");
+
     console.log(res);
   };
 
@@ -185,11 +187,9 @@ const Login = () => {
                     fontSize: "16px",
                     textAlign: "center",
                   }}
-                  // rest api 키가 아닌 js 키를 사용해야 합니다.
                   jsKey={KAKAO_JS_KEY}
                   onSuccess={(res) => socialLoginSuccess(res)}
                   onFailure={(res) => socialLoginFail(res)}
-                  // getPofile 속성을 주지 않으면 유저 정보를 받을 수 없습니다.
                   getProfile={true}
                 ></KakaoLogin>
 

@@ -31,7 +31,7 @@ const Slider = (props) => {
     //sliderImg 1줄 추가 최신순부터
     setTimeout(() => {
       onSliderCompleted();
-    }, 1000); // FIXME
+    }, 1000); // FIXME << TRANSITION END
   }
 
   function onSliderCompleted() {
